@@ -3,7 +3,7 @@ import 'package:Cafedy/data/cache_repository.dart';
 import 'package:Cafedy/data/cafedy_client.dart';
 import 'package:Cafedy/features/app/app_bloc.dart';
 import 'package:Cafedy/features/main/main_screen.dart';
-import 'package:Cafedy/features/order/screens/result_screen.dart';
+import 'package:Cafedy/features/result_screen.dart';
 import 'package:Cafedy/routes.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';

@@ -1,12 +1,11 @@
-import 'package:Cafedy/features/app/app_bloc.dart';
 import 'package:Cafedy/data/cache_repository.dart';
 import 'package:Cafedy/data/cafedy_client.dart';
 import 'package:Cafedy/data/models/order.dart';
+import 'package:Cafedy/features/app/app_bloc.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-
-part 'order_bloc.freezed.dart';
+part 'daily_order_bloc.freezed.dart';
 
 //part 'order_bloc.g.dart';
 

@@ -1,8 +1,8 @@
 import 'dart:developer';
 import 'dart:io';
 
-import 'package:Cafedy/features/order/screens/order/order_bloc.dart';
-import 'package:Cafedy/features/order/widgets/order_form.dart';
+import 'package:Cafedy/features/daily_order/daily_order_bloc.dart';
+import 'package:Cafedy/features/daily_order/widgets/order_form.dart';
 import 'package:Cafedy/routes.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
