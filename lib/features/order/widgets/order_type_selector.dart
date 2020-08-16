@@ -4,9 +4,9 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 
-import '../../data/models/option.dart';
-import '../../data/models/package.dart';
-import '../../order/widgets/glass_counter.dart';
+import '../../../data/models/option.dart';
+import '../../../data/models/package.dart';
+import 'glass_counter.dart';
 
 class OrderTypeSelector extends HookWidget {
   final List<Option> types;

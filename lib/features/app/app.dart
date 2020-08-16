@@ -1,18 +1,18 @@
 import 'package:Cafedy/common/colorz.dart';
 import 'package:Cafedy/data/cache_repository.dart';
 import 'package:Cafedy/data/cafedy_client.dart';
-import 'package:Cafedy/order/screens/order/order_bloc.dart';
-import 'package:Cafedy/order/screens/order/order_screen.dart';
-import 'package:Cafedy/order/screens/result_screen.dart';
+import 'package:Cafedy/features/order/screens/order/order_bloc.dart';
+import 'package:Cafedy/features/order/screens/order/order_screen.dart';
+import 'package:Cafedy/features/order/screens/result_screen.dart';
 import 'package:Cafedy/routes.dart';
-import 'package:Cafedy/app/app_bloc.dart';
+import 'package:Cafedy/features/app/app_bloc.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../splash_screen.dart';
+import '../../splash_screen.dart';
 
 class MyApp extends StatelessWidget {
   final SharedPreferences sharedPreferences;

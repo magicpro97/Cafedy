@@ -4,8 +4,8 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import '../../order/widgets/rounded_button.dart';
-import '../../routes.dart';
+import '../widgets/rounded_button.dart';
+import '../../../routes.dart';
 
 class ResultScreen extends StatelessWidget {
   @override

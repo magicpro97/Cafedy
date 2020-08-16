@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../app/app_bloc.dart';
+import '../features/app/app_bloc.dart';
 
 class CacheRepository {
   final SharedPreferences _preferences;

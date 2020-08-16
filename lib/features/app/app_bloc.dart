@@ -3,13 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../data/cache_repository.dart';
-import '../data/cafedy_client.dart';
-import '../data/models/caffeine_level.dart';
-import '../data/models/order_type.dart';
-import '../data/models/package.dart';
-import '../data/models/product.dart';
-import '../data/models/sweet_level.dart';
+import '../../data/cache_repository.dart';
+import '../../data/cafedy_client.dart';
+import '../../data/models/caffeine_level.dart';
+import '../../data/models/order_type.dart';
+import '../../data/models/package.dart';
+import '../../data/models/product.dart';
+import '../../data/models/sweet_level.dart';
 
 part 'app_bloc.freezed.dart';
 

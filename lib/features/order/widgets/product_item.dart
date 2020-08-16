@@ -2,7 +2,7 @@ import 'package:Cafedy/common/dimen.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
-import '../../data/models/product.dart';
+import '../../../data/models/product.dart';
 
 class ProductItem extends StatelessWidget {
   final Product product;
