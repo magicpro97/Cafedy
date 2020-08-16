@@ -1,0 +1,59 @@
+name: Cafedy
+description: Cafedy.
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+4
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^0.1.3
+  cached_network_image: ^2.2.0+1
+  carousel_slider: ^2.2.1
+  flutter_hooks: ^0.13.1
+  equatable: ^1.2.3
+  flutter_money_formatter: ^0.8.3
+  retrofit:
+  dio: ^3.0.10
+  url_launcher: ^5.5.0
+  freezed_annotation:
+  json_annotation:
+  flutter_bloc: ^6.0.1
+  shared_preferences: '>=0.5.7+3 <2.0.0'
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  build_runner:
+  retrofit_generator:
+  freezed:
+  json_serializable:
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages
