@@ -1,12 +1,10 @@
 import 'package:Cafedy/common/colorz.dart';
 import 'package:Cafedy/data/cache_repository.dart';
 import 'package:Cafedy/data/cafedy_client.dart';
+import 'package:Cafedy/features/app/app_bloc.dart';
 import 'package:Cafedy/features/main/main_screen.dart';
-import 'package:Cafedy/features/order/screens/order/order_bloc.dart';
-import 'package:Cafedy/features/order/screens/order/order_screen.dart';
 import 'package:Cafedy/features/order/screens/result_screen.dart';
 import 'package:Cafedy/routes.dart';
-import 'package:Cafedy/features/app/app_bloc.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -51,16 +49,6 @@ class MyApp extends StatelessWidget {
           initialRoute: Routes.SPLASH_SCREEN,
           routes: {
             Routes.SPLASH_SCREEN: (_) => SplashScreen(),
-            Routes.ORDER_SCREEN: (_) => BlocProvider(
-                  create: (context) {
-                    final client = RepositoryProvider.of<CafedyClient>(context);
-                    final cache =
-                        RepositoryProvider.of<CacheRepository>(context);
-
-                    return OrderBloc(client, cache);
-                  },
-                  child: OrderScreen(),
-                ),
             Routes.RESULT_SCREEN: (_) => ResultScreen(),
             Routes.MAIN_SCREEN: (_) => MainScreen(),
           },

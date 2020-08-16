@@ -6,7 +6,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 
-
 class OptionSelector extends HookWidget {
   final List<Option> caffeineOptions;
   final List<Option> sweetOptions;
@@ -100,6 +99,8 @@ class _Selector extends HookWidget {
           SizedBox(height: Dimens.LARGE_SPACE),
           Wrap(
             direction: Axis.horizontal,
+            alignment: WrapAlignment.center,
+            runSpacing: Dimens.NORMAL_SPACE,
             children: options
                 .map(
                   (e) => InkWell(
