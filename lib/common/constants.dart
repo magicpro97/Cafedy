@@ -16,4 +16,6 @@ class Network {
       'https://v2-api.sheety.co/9b4b78ec68ee02d906c53dc05c8de692/cafedy/';
   static const HOST_V2 =
       'https://sheet.best/api/sheets/b7043a87-f6b3-4dce-8967-adf84028d242';
+
+  static const MORE_URL = 'https://medium.com/cafedy';
 }

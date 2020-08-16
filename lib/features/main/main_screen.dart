@@ -1,6 +1,7 @@
 import 'package:Cafedy/data/cache_repository.dart';
 import 'package:Cafedy/data/cafedy_client.dart';
 import 'package:Cafedy/features/main/widgets/app_tab_bar.dart';
+import 'package:Cafedy/features/more/more_screen.dart';
 import 'package:Cafedy/features/order/screens/order/order_bloc.dart';
 import 'package:Cafedy/features/order/screens/order/order_screen.dart';
 import 'package:flutter/material.dart' hide Tab;
@@ -30,6 +31,8 @@ class MainScreen extends HookWidget {
             },
             child: OrderScreen(),
           ),
+          SizedBox(),
+          MoreScreen(),
         ],
       ),
     );

@@ -24,6 +24,7 @@ dependencies:
   json_annotation:
   flutter_bloc: ^6.0.1
   shared_preferences: '>=0.5.7+3 <2.0.0'
+  webview_flutter: ^0.3.22+1
 
 dev_dependencies:
   flutter_test:
