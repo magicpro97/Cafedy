@@ -1,6 +1,7 @@
 import 'package:Cafedy/common/colorz.dart';
 import 'package:Cafedy/data/cache_repository.dart';
 import 'package:Cafedy/data/cafedy_client.dart';
+import 'package:Cafedy/features/main/main_screen.dart';
 import 'package:Cafedy/features/order/screens/order/order_bloc.dart';
 import 'package:Cafedy/features/order/screens/order/order_screen.dart';
 import 'package:Cafedy/features/order/screens/result_screen.dart';
@@ -61,6 +62,7 @@ class MyApp extends StatelessWidget {
                   child: OrderScreen(),
                 ),
             Routes.RESULT_SCREEN: (_) => ResultScreen(),
+            Routes.MAIN_SCREEN: (_) => MainScreen(),
           },
         ),
       ),

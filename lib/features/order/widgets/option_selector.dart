@@ -160,7 +160,7 @@ class _OptionItem extends StatelessWidget {
       child: Text(
         label,
         style: textTheme.bodyText1.apply(
-          color: selected ? Colors.white : Colorz.TEXT,
+          color: selected ? Colors.white : Colorz.TEXT_BLACK,
         ),
       ),
     );

@@ -25,7 +25,7 @@ class SplashScreen extends StatelessWidget {
         state.maybeWhen(
           loaded: () {
             Navigator.of(context)
-                .pushNamedAndRemoveUntil(Routes.ORDER_SCREEN, (route) => true);
+                .pushNamedAndRemoveUntil(Routes.MAIN_SCREEN, (route) => true);
           },
           orElse: () {},
         );
