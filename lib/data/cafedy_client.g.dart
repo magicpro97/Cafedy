@@ -135,7 +135,7 @@ class _CafedyClient implements CafedyClient {
   }
 
   @override
-  sendOrders(order) async {
+  sendDailyOrders(order) async {
     ArgumentError.checkNotNull(order, 'order');
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
@@ -152,12 +152,46 @@ class _CafedyClient implements CafedyClient {
   }
 
   @override
-  updateOrder(order) async {
+  updateDailyOrder(order) async {
     ArgumentError.checkNotNull(order, 'order');
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _data = order.toJson();
     await _dio.request<void>('/tabs/Orders',
+        queryParameters: queryParameters,
+        options: RequestOptions(
+            method: 'PATCH',
+            headers: <String, dynamic>{},
+            extra: _extra,
+            baseUrl: baseUrl),
+        data: _data);
+    return null;
+  }
+
+  @override
+  sendDeliveryOrder(order) async {
+    ArgumentError.checkNotNull(order, 'order');
+    const _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _data = order.map((e) => e.toJson()).toList();
+    await _dio.request<void>('/tabs/DeliveryOrders',
+        queryParameters: queryParameters,
+        options: RequestOptions(
+            method: 'POST',
+            headers: <String, dynamic>{},
+            extra: _extra,
+            baseUrl: baseUrl),
+        data: _data);
+    return null;
+  }
+
+  @override
+  updateDeliveryOrder(order) async {
+    ArgumentError.checkNotNull(order, 'order');
+    const _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _data = order.toJson();
+    await _dio.request<void>('/tabs/DeliveryOrders',
         queryParameters: queryParameters,
         options: RequestOptions(
             method: 'PATCH',

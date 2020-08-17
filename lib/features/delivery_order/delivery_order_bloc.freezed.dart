@@ -1,7 +1,7 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
-part of 'daily_order_bloc.dart';
+part of 'delivery_order_bloc.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -9,73 +9,75 @@ part of 'daily_order_bloc.dart';
 
 T _$identity<T>(T value) => value;
 
-class _$DailyOrderActionTearOff {
-  const _$DailyOrderActionTearOff();
+class _$DeliveryOrderActionTearOff {
+  const _$DeliveryOrderActionTearOff();
 
   _InitialData initialData() {
     return _InitialData();
   }
 
-  _SubmitOrder submitOrder(DailyOrder order) {
-    return _SubmitOrder(
+  _Submit submit(DeliveryOrder order) {
+    return _Submit(
       order,
     );
   }
 
-  _UpdateOrder updateOrder(DailyOrder order) {
-    return _UpdateOrder(
+  _Update update(DeliveryOrder order) {
+    return _Update(
       order,
     );
   }
 }
 
 // ignore: unused_element
-const $DailyOrderAction = _$DailyOrderActionTearOff();
+const $DeliveryOrderAction = _$DeliveryOrderActionTearOff();
 
-mixin _$DailyOrderAction {
+mixin _$DeliveryOrderAction {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result initialData(),
-    @required Result submitOrder(DailyOrder order),
-    @required Result updateOrder(DailyOrder order),
+    @required Result submit(DeliveryOrder order),
+    @required Result update(DeliveryOrder order),
   });
 
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result initialData(),
-    Result submitOrder(DailyOrder order),
-    Result updateOrder(DailyOrder order),
+    Result submit(DeliveryOrder order),
+    Result update(DeliveryOrder order),
     @required Result orElse(),
   });
+
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result initialData(_InitialData value),
-    @required Result submitOrder(_SubmitOrder value),
-    @required Result updateOrder(_UpdateOrder value),
+    @required Result submit(_Submit value),
+    @required Result update(_Update value),
   });
+
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result initialData(_InitialData value),
-    Result submitOrder(_SubmitOrder value),
-    Result updateOrder(_UpdateOrder value),
+    Result submit(_Submit value),
+    Result update(_Update value),
     @required Result orElse(),
   });
 }
 
-abstract class $DailyOrderActionCopyWith<$Res> {
-  factory $DailyOrderActionCopyWith(
-          DailyOrderAction value, $Res Function(DailyOrderAction) then) =
-      _$DailyOrderActionCopyWithImpl<$Res>;
+abstract class $DeliveryOrderActionCopyWith<$Res> {
+  factory $DeliveryOrderActionCopyWith(
+          DeliveryOrderAction value, $Res Function(DeliveryOrderAction) then) =
+      _$DeliveryOrderActionCopyWithImpl<$Res>;
 }
 
-class _$DailyOrderActionCopyWithImpl<$Res>
-    implements $DailyOrderActionCopyWith<$Res> {
-  _$DailyOrderActionCopyWithImpl(this._value, this._then);
+class _$DeliveryOrderActionCopyWithImpl<$Res>
+    implements $DeliveryOrderActionCopyWith<$Res> {
+  _$DeliveryOrderActionCopyWithImpl(this._value, this._then);
 
-  final DailyOrderAction _value;
+  final DeliveryOrderAction _value;
 
   // ignore: unused_field
-  final $Res Function(DailyOrderAction) _then;
+  final $Res Function(DeliveryOrderAction) _then;
 }
 
 abstract class _$InitialDataCopyWith<$Res> {
@@ -85,10 +87,10 @@ abstract class _$InitialDataCopyWith<$Res> {
 }
 
 class __$InitialDataCopyWithImpl<$Res>
-    extends _$DailyOrderActionCopyWithImpl<$Res>
+    extends _$DeliveryOrderActionCopyWithImpl<$Res>
     implements _$InitialDataCopyWith<$Res> {
-  __$InitialDataCopyWithImpl(_InitialData _value,
-      $Res Function(_InitialData) _then)
+  __$InitialDataCopyWithImpl(
+      _InitialData _value, $Res Function(_InitialData) _then)
       : super(_value, (v) => _then(v as _InitialData));
 
   @override
@@ -100,7 +102,7 @@ class _$_InitialData implements _InitialData {
 
   @override
   String toString() {
-    return 'DailyOrderAction.initialData()';
+    return 'DeliveryOrderAction.initialData()';
   }
 
   @override
@@ -115,12 +117,12 @@ class _$_InitialData implements _InitialData {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result initialData(),
-    @required Result submitOrder(DailyOrder order),
-    @required Result updateOrder(DailyOrder order),
+    @required Result submit(DeliveryOrder order),
+    @required Result update(DeliveryOrder order),
   }) {
     assert(initialData != null);
-    assert(submitOrder != null);
-    assert(updateOrder != null);
+    assert(submit != null);
+    assert(update != null);
     return initialData();
   }
 
@@ -128,8 +130,8 @@ class _$_InitialData implements _InitialData {
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result initialData(),
-    Result submitOrder(DailyOrder order),
-    Result updateOrder(DailyOrder order),
+    Result submit(DeliveryOrder order),
+    Result update(DeliveryOrder order),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -143,12 +145,12 @@ class _$_InitialData implements _InitialData {
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result initialData(_InitialData value),
-    @required Result submitOrder(_SubmitOrder value),
-    @required Result updateOrder(_UpdateOrder value),
+    @required Result submit(_Submit value),
+    @required Result update(_Update value),
   }) {
     assert(initialData != null);
-    assert(submitOrder != null);
-    assert(updateOrder != null);
+    assert(submit != null);
+    assert(update != null);
     return initialData(this);
   }
 
@@ -156,8 +158,8 @@ class _$_InitialData implements _InitialData {
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result initialData(_InitialData value),
-    Result submitOrder(_SubmitOrder value),
-    Result updateOrder(_UpdateOrder value),
+    Result submit(_Submit value),
+    Result update(_Update value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -168,65 +170,63 @@ class _$_InitialData implements _InitialData {
   }
 }
 
-abstract class _InitialData implements DailyOrderAction {
+abstract class _InitialData implements DeliveryOrderAction {
   factory _InitialData() = _$_InitialData;
 }
 
-abstract class _$SubmitOrderCopyWith<$Res> {
-  factory _$SubmitOrderCopyWith(
-          _SubmitOrder value, $Res Function(_SubmitOrder) then) =
-      __$SubmitOrderCopyWithImpl<$Res>;
+abstract class _$SubmitCopyWith<$Res> {
+  factory _$SubmitCopyWith(_Submit value, $Res Function(_Submit) then) =
+      __$SubmitCopyWithImpl<$Res>;
 
-  $Res call({DailyOrder order});
+  $Res call({DeliveryOrder order});
 
-  $DailyOrderCopyWith<$Res> get order;
+  $DeliveryOrderCopyWith<$Res> get order;
 }
 
-class __$SubmitOrderCopyWithImpl<$Res>
-    extends _$DailyOrderActionCopyWithImpl<$Res>
-    implements _$SubmitOrderCopyWith<$Res> {
-  __$SubmitOrderCopyWithImpl(_SubmitOrder _value,
-      $Res Function(_SubmitOrder) _then)
-      : super(_value, (v) => _then(v as _SubmitOrder));
+class __$SubmitCopyWithImpl<$Res>
+    extends _$DeliveryOrderActionCopyWithImpl<$Res>
+    implements _$SubmitCopyWith<$Res> {
+  __$SubmitCopyWithImpl(_Submit _value, $Res Function(_Submit) _then)
+      : super(_value, (v) => _then(v as _Submit));
 
   @override
-  _SubmitOrder get _value => super._value as _SubmitOrder;
+  _Submit get _value => super._value as _Submit;
 
   @override
   $Res call({
     Object order = freezed,
   }) {
-    return _then(_SubmitOrder(
-      order == freezed ? _value.order : order as DailyOrder,
+    return _then(_Submit(
+      order == freezed ? _value.order : order as DeliveryOrder,
     ));
   }
 
   @override
-  $DailyOrderCopyWith<$Res> get order {
+  $DeliveryOrderCopyWith<$Res> get order {
     if (_value.order == null) {
       return null;
     }
-    return $DailyOrderCopyWith<$Res>(_value.order, (value) {
+    return $DeliveryOrderCopyWith<$Res>(_value.order, (value) {
       return _then(_value.copyWith(order: value));
     });
   }
 }
 
-class _$_SubmitOrder implements _SubmitOrder {
-  _$_SubmitOrder(this.order) : assert(order != null);
+class _$_Submit implements _Submit {
+  _$_Submit(this.order) : assert(order != null);
 
   @override
-  final DailyOrder order;
+  final DeliveryOrder order;
 
   @override
   String toString() {
-    return 'DailyOrderAction.submitOrder(order: $order)';
+    return 'DeliveryOrderAction.submit(order: $order)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _SubmitOrder &&
+        (other is _Submit &&
             (identical(other.order, order) ||
                 const DeepCollectionEquality().equals(other.order, order)));
   }
@@ -236,33 +236,33 @@ class _$_SubmitOrder implements _SubmitOrder {
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(order);
 
   @override
-  _$SubmitOrderCopyWith<_SubmitOrder> get copyWith =>
-      __$SubmitOrderCopyWithImpl<_SubmitOrder>(this, _$identity);
+  _$SubmitCopyWith<_Submit> get copyWith =>
+      __$SubmitCopyWithImpl<_Submit>(this, _$identity);
 
   @override
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result initialData(),
-    @required Result submitOrder(DailyOrder order),
-    @required Result updateOrder(DailyOrder order),
+    @required Result submit(DeliveryOrder order),
+    @required Result update(DeliveryOrder order),
   }) {
     assert(initialData != null);
-    assert(submitOrder != null);
-    assert(updateOrder != null);
-    return submitOrder(order);
+    assert(submit != null);
+    assert(update != null);
+    return submit(order);
   }
 
   @override
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result initialData(),
-    Result submitOrder(DailyOrder order),
-    Result updateOrder(DailyOrder order),
+    Result submit(DeliveryOrder order),
+    Result update(DeliveryOrder order),
     @required Result orElse(),
   }) {
     assert(orElse != null);
-    if (submitOrder != null) {
-      return submitOrder(order);
+    if (submit != null) {
+      return submit(order);
     }
     return orElse();
   }
@@ -271,94 +271,92 @@ class _$_SubmitOrder implements _SubmitOrder {
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result initialData(_InitialData value),
-    @required Result submitOrder(_SubmitOrder value),
-    @required Result updateOrder(_UpdateOrder value),
+    @required Result submit(_Submit value),
+    @required Result update(_Update value),
   }) {
     assert(initialData != null);
-    assert(submitOrder != null);
-    assert(updateOrder != null);
-    return submitOrder(this);
+    assert(submit != null);
+    assert(update != null);
+    return submit(this);
   }
 
   @override
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result initialData(_InitialData value),
-    Result submitOrder(_SubmitOrder value),
-    Result updateOrder(_UpdateOrder value),
+    Result submit(_Submit value),
+    Result update(_Update value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
-    if (submitOrder != null) {
-      return submitOrder(this);
+    if (submit != null) {
+      return submit(this);
     }
     return orElse();
   }
 }
 
-abstract class _SubmitOrder implements DailyOrderAction {
-  factory _SubmitOrder(DailyOrder order) = _$_SubmitOrder;
+abstract class _Submit implements DeliveryOrderAction {
+  factory _Submit(DeliveryOrder order) = _$_Submit;
 
-  DailyOrder get order;
+  DeliveryOrder get order;
 
-  _$SubmitOrderCopyWith<_SubmitOrder> get copyWith;
+  _$SubmitCopyWith<_Submit> get copyWith;
 }
 
-abstract class _$UpdateOrderCopyWith<$Res> {
-  factory _$UpdateOrderCopyWith(
-          _UpdateOrder value, $Res Function(_UpdateOrder) then) =
-      __$UpdateOrderCopyWithImpl<$Res>;
+abstract class _$UpdateCopyWith<$Res> {
+  factory _$UpdateCopyWith(_Update value, $Res Function(_Update) then) =
+      __$UpdateCopyWithImpl<$Res>;
 
-  $Res call({DailyOrder order});
+  $Res call({DeliveryOrder order});
 
-  $DailyOrderCopyWith<$Res> get order;
+  $DeliveryOrderCopyWith<$Res> get order;
 }
 
-class __$UpdateOrderCopyWithImpl<$Res>
-    extends _$DailyOrderActionCopyWithImpl<$Res>
-    implements _$UpdateOrderCopyWith<$Res> {
-  __$UpdateOrderCopyWithImpl(_UpdateOrder _value,
-      $Res Function(_UpdateOrder) _then)
-      : super(_value, (v) => _then(v as _UpdateOrder));
+class __$UpdateCopyWithImpl<$Res>
+    extends _$DeliveryOrderActionCopyWithImpl<$Res>
+    implements _$UpdateCopyWith<$Res> {
+  __$UpdateCopyWithImpl(_Update _value, $Res Function(_Update) _then)
+      : super(_value, (v) => _then(v as _Update));
 
   @override
-  _UpdateOrder get _value => super._value as _UpdateOrder;
+  _Update get _value => super._value as _Update;
 
   @override
   $Res call({
     Object order = freezed,
   }) {
-    return _then(_UpdateOrder(
-      order == freezed ? _value.order : order as DailyOrder,
+    return _then(_Update(
+      order == freezed ? _value.order : order as DeliveryOrder,
     ));
   }
 
   @override
-  $DailyOrderCopyWith<$Res> get order {
+  $DeliveryOrderCopyWith<$Res> get order {
     if (_value.order == null) {
       return null;
     }
-    return $DailyOrderCopyWith<$Res>(_value.order, (value) {
+    return $DeliveryOrderCopyWith<$Res>(_value.order, (value) {
       return _then(_value.copyWith(order: value));
     });
   }
 }
 
-class _$_UpdateOrder implements _UpdateOrder {
-  _$_UpdateOrder(this.order) : assert(order != null);
+class _$_Update implements _Update {
+  _$_Update(this.order) : assert(order != null);
 
   @override
-  final DailyOrder order;
+  final DeliveryOrder order;
 
   @override
   String toString() {
-    return 'DailyOrderAction.updateOrder(order: $order)';
+    return 'DeliveryOrderAction.update(order: $order)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _UpdateOrder &&
+        (other is _Update &&
             (identical(other.order, order) ||
                 const DeepCollectionEquality().equals(other.order, order)));
   }
@@ -368,33 +366,33 @@ class _$_UpdateOrder implements _UpdateOrder {
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(order);
 
   @override
-  _$UpdateOrderCopyWith<_UpdateOrder> get copyWith =>
-      __$UpdateOrderCopyWithImpl<_UpdateOrder>(this, _$identity);
+  _$UpdateCopyWith<_Update> get copyWith =>
+      __$UpdateCopyWithImpl<_Update>(this, _$identity);
 
   @override
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result initialData(),
-    @required Result submitOrder(DailyOrder order),
-    @required Result updateOrder(DailyOrder order),
+    @required Result submit(DeliveryOrder order),
+    @required Result update(DeliveryOrder order),
   }) {
     assert(initialData != null);
-    assert(submitOrder != null);
-    assert(updateOrder != null);
-    return updateOrder(order);
+    assert(submit != null);
+    assert(update != null);
+    return update(order);
   }
 
   @override
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result initialData(),
-    Result submitOrder(DailyOrder order),
-    Result updateOrder(DailyOrder order),
+    Result submit(DeliveryOrder order),
+    Result update(DeliveryOrder order),
     @required Result orElse(),
   }) {
     assert(orElse != null);
-    if (updateOrder != null) {
-      return updateOrder(order);
+    if (update != null) {
+      return update(order);
     }
     return orElse();
   }
@@ -403,62 +401,58 @@ class _$_UpdateOrder implements _UpdateOrder {
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result initialData(_InitialData value),
-    @required Result submitOrder(_SubmitOrder value),
-    @required Result updateOrder(_UpdateOrder value),
+    @required Result submit(_Submit value),
+    @required Result update(_Update value),
   }) {
     assert(initialData != null);
-    assert(submitOrder != null);
-    assert(updateOrder != null);
-    return updateOrder(this);
+    assert(submit != null);
+    assert(update != null);
+    return update(this);
   }
 
   @override
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result initialData(_InitialData value),
-    Result submitOrder(_SubmitOrder value),
-    Result updateOrder(_UpdateOrder value),
+    Result submit(_Submit value),
+    Result update(_Update value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
-    if (updateOrder != null) {
-      return updateOrder(this);
+    if (update != null) {
+      return update(this);
     }
     return orElse();
   }
 }
 
-abstract class _UpdateOrder implements DailyOrderAction {
-  factory _UpdateOrder(DailyOrder order) = _$_UpdateOrder;
+abstract class _Update implements DeliveryOrderAction {
+  factory _Update(DeliveryOrder order) = _$_Update;
 
-  DailyOrder get order;
+  DeliveryOrder get order;
 
-  _$UpdateOrderCopyWith<_UpdateOrder> get copyWith;
+  _$UpdateCopyWith<_Update> get copyWith;
 }
 
-class _$DailyOrderStateTearOff {
-  const _$DailyOrderStateTearOff();
+class _$DeliveryOrderStateTearOff {
+  const _$DeliveryOrderStateTearOff();
 
   _Initial initial() {
-    return const _Initial();
+    return _Initial();
   }
 
   _Loading loading() {
     return const _Loading();
   }
 
-  _Loaded loaded(AppStore store) {
+  _Loaded loaded(AppStore appStore) {
     return _Loaded(
-      store,
+      appStore,
     );
   }
 
   _Submitted submitted() {
     return const _Submitted();
-  }
-
-  _Updated updated() {
-    return const _Updated();
   }
 
   _Error error({String message}) {
@@ -469,16 +463,15 @@ class _$DailyOrderStateTearOff {
 }
 
 // ignore: unused_element
-const $DailyOrderState = _$DailyOrderStateTearOff();
+const $DeliveryOrderState = _$DeliveryOrderStateTearOff();
 
-mixin _$DailyOrderState {
+mixin _$DeliveryOrderState {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result initial(),
     @required Result loading(),
-    @required Result loaded(AppStore store),
+    @required Result loaded(AppStore appStore),
     @required Result submitted(),
-    @required Result updated(),
     @required Result error(String message),
   });
 
@@ -486,47 +479,46 @@ mixin _$DailyOrderState {
   Result maybeWhen<Result extends Object>({
     Result initial(),
     Result loading(),
-    Result loaded(AppStore store),
+    Result loaded(AppStore appStore),
     Result submitted(),
-    Result updated(),
     Result error(String message),
     @required Result orElse(),
   });
+
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result initial(_Initial value),
     @required Result loading(_Loading value),
     @required Result loaded(_Loaded value),
     @required Result submitted(_Submitted value),
-    @required Result updated(_Updated value),
     @required Result error(_Error value),
   });
+
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result initial(_Initial value),
     Result loading(_Loading value),
     Result loaded(_Loaded value),
     Result submitted(_Submitted value),
-    Result updated(_Updated value),
     Result error(_Error value),
     @required Result orElse(),
   });
 }
 
-abstract class $DailyOrderStateCopyWith<$Res> {
-  factory $DailyOrderStateCopyWith(DailyOrderState value,
-      $Res Function(DailyOrderState) then) =
-  _$DailyOrderStateCopyWithImpl<$Res>;
+abstract class $DeliveryOrderStateCopyWith<$Res> {
+  factory $DeliveryOrderStateCopyWith(
+          DeliveryOrderState value, $Res Function(DeliveryOrderState) then) =
+      _$DeliveryOrderStateCopyWithImpl<$Res>;
 }
 
-class _$DailyOrderStateCopyWithImpl<$Res>
-    implements $DailyOrderStateCopyWith<$Res> {
-  _$DailyOrderStateCopyWithImpl(this._value, this._then);
+class _$DeliveryOrderStateCopyWithImpl<$Res>
+    implements $DeliveryOrderStateCopyWith<$Res> {
+  _$DeliveryOrderStateCopyWithImpl(this._value, this._then);
 
-  final DailyOrderState _value;
+  final DeliveryOrderState _value;
 
   // ignore: unused_field
-  final $Res Function(DailyOrderState) _then;
+  final $Res Function(DeliveryOrderState) _then;
 }
 
 abstract class _$InitialCopyWith<$Res> {
@@ -534,7 +526,8 @@ abstract class _$InitialCopyWith<$Res> {
       __$InitialCopyWithImpl<$Res>;
 }
 
-class __$InitialCopyWithImpl<$Res> extends _$DailyOrderStateCopyWithImpl<$Res>
+class __$InitialCopyWithImpl<$Res>
+    extends _$DeliveryOrderStateCopyWithImpl<$Res>
     implements _$InitialCopyWith<$Res> {
   __$InitialCopyWithImpl(_Initial _value, $Res Function(_Initial) _then)
       : super(_value, (v) => _then(v as _Initial));
@@ -544,11 +537,11 @@ class __$InitialCopyWithImpl<$Res> extends _$DailyOrderStateCopyWithImpl<$Res>
 }
 
 class _$_Initial implements _Initial {
-  const _$_Initial();
+  _$_Initial();
 
   @override
   String toString() {
-    return 'DailyOrderState.initial()';
+    return 'DeliveryOrderState.initial()';
   }
 
   @override
@@ -564,16 +557,14 @@ class _$_Initial implements _Initial {
   Result when<Result extends Object>({
     @required Result initial(),
     @required Result loading(),
-    @required Result loaded(AppStore store),
+    @required Result loaded(AppStore appStore),
     @required Result submitted(),
-    @required Result updated(),
     @required Result error(String message),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(loaded != null);
     assert(submitted != null);
-    assert(updated != null);
     assert(error != null);
     return initial();
   }
@@ -583,9 +574,8 @@ class _$_Initial implements _Initial {
   Result maybeWhen<Result extends Object>({
     Result initial(),
     Result loading(),
-    Result loaded(AppStore store),
+    Result loaded(AppStore appStore),
     Result submitted(),
-    Result updated(),
     Result error(String message),
     @required Result orElse(),
   }) {
@@ -603,14 +593,12 @@ class _$_Initial implements _Initial {
     @required Result loading(_Loading value),
     @required Result loaded(_Loaded value),
     @required Result submitted(_Submitted value),
-    @required Result updated(_Updated value),
     @required Result error(_Error value),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(loaded != null);
     assert(submitted != null);
-    assert(updated != null);
     assert(error != null);
     return initial(this);
   }
@@ -622,7 +610,6 @@ class _$_Initial implements _Initial {
     Result loading(_Loading value),
     Result loaded(_Loaded value),
     Result submitted(_Submitted value),
-    Result updated(_Updated value),
     Result error(_Error value),
     @required Result orElse(),
   }) {
@@ -634,8 +621,8 @@ class _$_Initial implements _Initial {
   }
 }
 
-abstract class _Initial implements DailyOrderState {
-  const factory _Initial() = _$_Initial;
+abstract class _Initial implements DeliveryOrderState {
+  factory _Initial() = _$_Initial;
 }
 
 abstract class _$LoadingCopyWith<$Res> {
@@ -643,7 +630,8 @@ abstract class _$LoadingCopyWith<$Res> {
       __$LoadingCopyWithImpl<$Res>;
 }
 
-class __$LoadingCopyWithImpl<$Res> extends _$DailyOrderStateCopyWithImpl<$Res>
+class __$LoadingCopyWithImpl<$Res>
+    extends _$DeliveryOrderStateCopyWithImpl<$Res>
     implements _$LoadingCopyWith<$Res> {
   __$LoadingCopyWithImpl(_Loading _value, $Res Function(_Loading) _then)
       : super(_value, (v) => _then(v as _Loading));
@@ -657,7 +645,7 @@ class _$_Loading implements _Loading {
 
   @override
   String toString() {
-    return 'DailyOrderState.loading()';
+    return 'DeliveryOrderState.loading()';
   }
 
   @override
@@ -673,16 +661,14 @@ class _$_Loading implements _Loading {
   Result when<Result extends Object>({
     @required Result initial(),
     @required Result loading(),
-    @required Result loaded(AppStore store),
+    @required Result loaded(AppStore appStore),
     @required Result submitted(),
-    @required Result updated(),
     @required Result error(String message),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(loaded != null);
     assert(submitted != null);
-    assert(updated != null);
     assert(error != null);
     return loading();
   }
@@ -692,9 +678,8 @@ class _$_Loading implements _Loading {
   Result maybeWhen<Result extends Object>({
     Result initial(),
     Result loading(),
-    Result loaded(AppStore store),
+    Result loaded(AppStore appStore),
     Result submitted(),
-    Result updated(),
     Result error(String message),
     @required Result orElse(),
   }) {
@@ -712,14 +697,12 @@ class _$_Loading implements _Loading {
     @required Result loading(_Loading value),
     @required Result loaded(_Loaded value),
     @required Result submitted(_Submitted value),
-    @required Result updated(_Updated value),
     @required Result error(_Error value),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(loaded != null);
     assert(submitted != null);
-    assert(updated != null);
     assert(error != null);
     return loading(this);
   }
@@ -731,7 +714,6 @@ class _$_Loading implements _Loading {
     Result loading(_Loading value),
     Result loaded(_Loaded value),
     Result submitted(_Submitted value),
-    Result updated(_Updated value),
     Result error(_Error value),
     @required Result orElse(),
   }) {
@@ -743,19 +725,20 @@ class _$_Loading implements _Loading {
   }
 }
 
-abstract class _Loading implements DailyOrderState {
+abstract class _Loading implements DeliveryOrderState {
   const factory _Loading() = _$_Loading;
 }
 
 abstract class _$LoadedCopyWith<$Res> {
   factory _$LoadedCopyWith(_Loaded value, $Res Function(_Loaded) then) =
       __$LoadedCopyWithImpl<$Res>;
-  $Res call({AppStore store});
 
-  $AppStoreCopyWith<$Res> get store;
+  $Res call({AppStore appStore});
+
+  $AppStoreCopyWith<$Res> get appStore;
 }
 
-class __$LoadedCopyWithImpl<$Res> extends _$DailyOrderStateCopyWithImpl<$Res>
+class __$LoadedCopyWithImpl<$Res> extends _$DeliveryOrderStateCopyWithImpl<$Res>
     implements _$LoadedCopyWith<$Res> {
   __$LoadedCopyWithImpl(_Loaded _value, $Res Function(_Loaded) _then)
       : super(_value, (v) => _then(v as _Loaded));
@@ -765,46 +748,47 @@ class __$LoadedCopyWithImpl<$Res> extends _$DailyOrderStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object store = freezed,
+    Object appStore = freezed,
   }) {
     return _then(_Loaded(
-      store == freezed ? _value.store : store as AppStore,
+      appStore == freezed ? _value.appStore : appStore as AppStore,
     ));
   }
 
   @override
-  $AppStoreCopyWith<$Res> get store {
-    if (_value.store == null) {
+  $AppStoreCopyWith<$Res> get appStore {
+    if (_value.appStore == null) {
       return null;
     }
-    return $AppStoreCopyWith<$Res>(_value.store, (value) {
-      return _then(_value.copyWith(store: value));
+    return $AppStoreCopyWith<$Res>(_value.appStore, (value) {
+      return _then(_value.copyWith(appStore: value));
     });
   }
 }
 
 class _$_Loaded implements _Loaded {
-  const _$_Loaded(this.store) : assert(store != null);
+  _$_Loaded(this.appStore) : assert(appStore != null);
 
   @override
-  final AppStore store;
+  final AppStore appStore;
 
   @override
   String toString() {
-    return 'DailyOrderState.loaded(store: $store)';
+    return 'DeliveryOrderState.loaded(appStore: $appStore)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _Loaded &&
-            (identical(other.store, store) ||
-                const DeepCollectionEquality().equals(other.store, store)));
+            (identical(other.appStore, appStore) ||
+                const DeepCollectionEquality()
+                    .equals(other.appStore, appStore)));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(store);
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(appStore);
 
   @override
   _$LoadedCopyWith<_Loaded> get copyWith =>
@@ -815,18 +799,16 @@ class _$_Loaded implements _Loaded {
   Result when<Result extends Object>({
     @required Result initial(),
     @required Result loading(),
-    @required Result loaded(AppStore store),
+    @required Result loaded(AppStore appStore),
     @required Result submitted(),
-    @required Result updated(),
     @required Result error(String message),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(loaded != null);
     assert(submitted != null);
-    assert(updated != null);
     assert(error != null);
-    return loaded(store);
+    return loaded(appStore);
   }
 
   @override
@@ -834,15 +816,14 @@ class _$_Loaded implements _Loaded {
   Result maybeWhen<Result extends Object>({
     Result initial(),
     Result loading(),
-    Result loaded(AppStore store),
+    Result loaded(AppStore appStore),
     Result submitted(),
-    Result updated(),
     Result error(String message),
     @required Result orElse(),
   }) {
     assert(orElse != null);
     if (loaded != null) {
-      return loaded(store);
+      return loaded(appStore);
     }
     return orElse();
   }
@@ -854,14 +835,12 @@ class _$_Loaded implements _Loaded {
     @required Result loading(_Loading value),
     @required Result loaded(_Loaded value),
     @required Result submitted(_Submitted value),
-    @required Result updated(_Updated value),
     @required Result error(_Error value),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(loaded != null);
     assert(submitted != null);
-    assert(updated != null);
     assert(error != null);
     return loaded(this);
   }
@@ -873,7 +852,6 @@ class _$_Loaded implements _Loaded {
     Result loading(_Loading value),
     Result loaded(_Loaded value),
     Result submitted(_Submitted value),
-    Result updated(_Updated value),
     Result error(_Error value),
     @required Result orElse(),
   }) {
@@ -885,10 +863,10 @@ class _$_Loaded implements _Loaded {
   }
 }
 
-abstract class _Loaded implements DailyOrderState {
-  const factory _Loaded(AppStore store) = _$_Loaded;
+abstract class _Loaded implements DeliveryOrderState {
+  factory _Loaded(AppStore appStore) = _$_Loaded;
 
-  AppStore get store;
+  AppStore get appStore;
 
   _$LoadedCopyWith<_Loaded> get copyWith;
 }
@@ -899,7 +877,8 @@ abstract class _$SubmittedCopyWith<$Res> {
       __$SubmittedCopyWithImpl<$Res>;
 }
 
-class __$SubmittedCopyWithImpl<$Res> extends _$DailyOrderStateCopyWithImpl<$Res>
+class __$SubmittedCopyWithImpl<$Res>
+    extends _$DeliveryOrderStateCopyWithImpl<$Res>
     implements _$SubmittedCopyWith<$Res> {
   __$SubmittedCopyWithImpl(_Submitted _value, $Res Function(_Submitted) _then)
       : super(_value, (v) => _then(v as _Submitted));
@@ -913,7 +892,7 @@ class _$_Submitted implements _Submitted {
 
   @override
   String toString() {
-    return 'DailyOrderState.submitted()';
+    return 'DeliveryOrderState.submitted()';
   }
 
   @override
@@ -929,16 +908,14 @@ class _$_Submitted implements _Submitted {
   Result when<Result extends Object>({
     @required Result initial(),
     @required Result loading(),
-    @required Result loaded(AppStore store),
+    @required Result loaded(AppStore appStore),
     @required Result submitted(),
-    @required Result updated(),
     @required Result error(String message),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(loaded != null);
     assert(submitted != null);
-    assert(updated != null);
     assert(error != null);
     return submitted();
   }
@@ -948,9 +925,8 @@ class _$_Submitted implements _Submitted {
   Result maybeWhen<Result extends Object>({
     Result initial(),
     Result loading(),
-    Result loaded(AppStore store),
+    Result loaded(AppStore appStore),
     Result submitted(),
-    Result updated(),
     Result error(String message),
     @required Result orElse(),
   }) {
@@ -968,14 +944,12 @@ class _$_Submitted implements _Submitted {
     @required Result loading(_Loading value),
     @required Result loaded(_Loaded value),
     @required Result submitted(_Submitted value),
-    @required Result updated(_Updated value),
     @required Result error(_Error value),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(loaded != null);
     assert(submitted != null);
-    assert(updated != null);
     assert(error != null);
     return submitted(this);
   }
@@ -987,7 +961,6 @@ class _$_Submitted implements _Submitted {
     Result loading(_Loading value),
     Result loaded(_Loaded value),
     Result submitted(_Submitted value),
-    Result updated(_Updated value),
     Result error(_Error value),
     @required Result orElse(),
   }) {
@@ -999,126 +972,18 @@ class _$_Submitted implements _Submitted {
   }
 }
 
-abstract class _Submitted implements DailyOrderState {
+abstract class _Submitted implements DeliveryOrderState {
   const factory _Submitted() = _$_Submitted;
-}
-
-abstract class _$UpdatedCopyWith<$Res> {
-  factory _$UpdatedCopyWith(_Updated value, $Res Function(_Updated) then) =
-      __$UpdatedCopyWithImpl<$Res>;
-}
-
-class __$UpdatedCopyWithImpl<$Res> extends _$DailyOrderStateCopyWithImpl<$Res>
-    implements _$UpdatedCopyWith<$Res> {
-  __$UpdatedCopyWithImpl(_Updated _value, $Res Function(_Updated) _then)
-      : super(_value, (v) => _then(v as _Updated));
-
-  @override
-  _Updated get _value => super._value as _Updated;
-}
-
-class _$_Updated implements _Updated {
-  const _$_Updated();
-
-  @override
-  String toString() {
-    return 'DailyOrderState.updated()';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _Updated);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result loading(),
-    @required Result loaded(AppStore store),
-    @required Result submitted(),
-    @required Result updated(),
-    @required Result error(String message),
-  }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(loaded != null);
-    assert(submitted != null);
-    assert(updated != null);
-    assert(error != null);
-    return updated();
-  }
-
-  @override
-  @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result loading(),
-    Result loaded(AppStore store),
-    Result submitted(),
-    Result updated(),
-    Result error(String message),
-    @required Result orElse(),
-  }) {
-    assert(orElse != null);
-    if (updated != null) {
-      return updated();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(_Initial value),
-    @required Result loading(_Loading value),
-    @required Result loaded(_Loaded value),
-    @required Result submitted(_Submitted value),
-    @required Result updated(_Updated value),
-    @required Result error(_Error value),
-  }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(loaded != null);
-    assert(submitted != null);
-    assert(updated != null);
-    assert(error != null);
-    return updated(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(_Initial value),
-    Result loading(_Loading value),
-    Result loaded(_Loaded value),
-    Result submitted(_Submitted value),
-    Result updated(_Updated value),
-    Result error(_Error value),
-    @required Result orElse(),
-  }) {
-    assert(orElse != null);
-    if (updated != null) {
-      return updated(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _Updated implements DailyOrderState {
-  const factory _Updated() = _$_Updated;
 }
 
 abstract class _$ErrorCopyWith<$Res> {
   factory _$ErrorCopyWith(_Error value, $Res Function(_Error) then) =
       __$ErrorCopyWithImpl<$Res>;
+
   $Res call({String message});
 }
 
-class __$ErrorCopyWithImpl<$Res> extends _$DailyOrderStateCopyWithImpl<$Res>
+class __$ErrorCopyWithImpl<$Res> extends _$DeliveryOrderStateCopyWithImpl<$Res>
     implements _$ErrorCopyWith<$Res> {
   __$ErrorCopyWithImpl(_Error _value, $Res Function(_Error) _then)
       : super(_value, (v) => _then(v as _Error));
@@ -1137,14 +1002,14 @@ class __$ErrorCopyWithImpl<$Res> extends _$DailyOrderStateCopyWithImpl<$Res>
 }
 
 class _$_Error implements _Error {
-  const _$_Error({this.message});
+  _$_Error({this.message});
 
   @override
   final String message;
 
   @override
   String toString() {
-    return 'DailyOrderState.error(message: $message)';
+    return 'DeliveryOrderState.error(message: $message)';
   }
 
   @override
@@ -1168,16 +1033,14 @@ class _$_Error implements _Error {
   Result when<Result extends Object>({
     @required Result initial(),
     @required Result loading(),
-    @required Result loaded(AppStore store),
+    @required Result loaded(AppStore appStore),
     @required Result submitted(),
-    @required Result updated(),
     @required Result error(String message),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(loaded != null);
     assert(submitted != null);
-    assert(updated != null);
     assert(error != null);
     return error(message);
   }
@@ -1187,9 +1050,8 @@ class _$_Error implements _Error {
   Result maybeWhen<Result extends Object>({
     Result initial(),
     Result loading(),
-    Result loaded(AppStore store),
+    Result loaded(AppStore appStore),
     Result submitted(),
-    Result updated(),
     Result error(String message),
     @required Result orElse(),
   }) {
@@ -1207,14 +1069,12 @@ class _$_Error implements _Error {
     @required Result loading(_Loading value),
     @required Result loaded(_Loaded value),
     @required Result submitted(_Submitted value),
-    @required Result updated(_Updated value),
     @required Result error(_Error value),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(loaded != null);
     assert(submitted != null);
-    assert(updated != null);
     assert(error != null);
     return error(this);
   }
@@ -1226,7 +1086,6 @@ class _$_Error implements _Error {
     Result loading(_Loading value),
     Result loaded(_Loaded value),
     Result submitted(_Submitted value),
-    Result updated(_Updated value),
     Result error(_Error value),
     @required Result orElse(),
   }) {
@@ -1238,8 +1097,8 @@ class _$_Error implements _Error {
   }
 }
 
-abstract class _Error implements DailyOrderState {
-  const factory _Error({String message}) = _$_Error;
+abstract class _Error implements DeliveryOrderState {
+  factory _Error({String message}) = _$_Error;
 
   String get message;
 

@@ -1,59 +1,58 @@
 import 'package:Cafedy/data/cache_repository.dart';
 import 'package:Cafedy/data/cafedy_client.dart';
-import 'package:Cafedy/data/models/order.dart';
+import 'package:Cafedy/data/models/daily_order.dart';
 import 'package:Cafedy/features/app/app_bloc.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'daily_order_bloc.freezed.dart';
 
-//part 'order_bloc.g.dart';
-
 @freezed
-abstract class OrderAction with _$OrderAction {
-  factory OrderAction.initialData() = _InitialData;
+abstract class DailyOrderAction with _$DailyOrderAction {
+  factory DailyOrderAction.initialData() = _InitialData;
 
-  factory OrderAction.submitOrder(Order order) = _SubmitOrder;
+  factory DailyOrderAction.submitOrder(DailyOrder order) = _SubmitOrder;
 
-  factory OrderAction.updateOrder(Order order) = _UpdateOrder;
+  factory DailyOrderAction.updateOrder(DailyOrder order) = _UpdateOrder;
 }
 
 @freezed
-abstract class OrderState with _$OrderState {
-  const factory OrderState.initial() = _Initial;
+abstract class DailyOrderState with _$DailyOrderState {
+  const factory DailyOrderState.initial() = _Initial;
 
-  const factory OrderState.loading() = _Loading;
+  const factory DailyOrderState.loading() = _Loading;
 
-  const factory OrderState.loaded(AppStore store) = _Loaded;
+  const factory DailyOrderState.loaded(AppStore store) = _Loaded;
 
-  const factory OrderState.submitted() = _Submitted;
+  const factory DailyOrderState.submitted() = _Submitted;
 
-  const factory OrderState.updated() = _Updated;
+  const factory DailyOrderState.updated() = _Updated;
 
-  const factory OrderState.error({String message}) = _Error;
+  const factory DailyOrderState.error({String message}) = _Error;
 }
 
-class OrderBloc extends Bloc<OrderAction, OrderState> {
+class DailyOrderBloc extends Bloc<DailyOrderAction, DailyOrderState> {
   final CafedyClient _cafedyClient;
   final CacheRepository _cacheRepository;
 
-  OrderBloc(this._cafedyClient, this._cacheRepository) : super(OrderState.initial());
+  DailyOrderBloc(this._cafedyClient, this._cacheRepository)
+      : super(DailyOrderState.initial());
 
   @override
-  Stream<OrderState> mapEventToState(OrderAction event) async* {
-    yield OrderState.loading();
+  Stream<DailyOrderState> mapEventToState(DailyOrderAction event) async* {
+    yield DailyOrderState.loading();
     yield await event.when(
       initialData: () {
         final appStore = _cacheRepository.getAppStore();
-        return OrderState.loaded(appStore);
+        return DailyOrderState.loaded(appStore);
       },
       submitOrder: (order) async {
-        await _cafedyClient.sendOrders([order]);
-        return OrderState.submitted();
+        await _cafedyClient.sendDailyOrders([order]);
+        return DailyOrderState.submitted();
       },
       updateOrder: (order) async {
-        await _cafedyClient.updateOrder(order);
-        return OrderState.updated();
+        await _cafedyClient.updateDailyOrder(order);
+        return DailyOrderState.updated();
       },
     );
   }

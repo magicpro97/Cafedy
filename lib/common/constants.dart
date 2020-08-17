@@ -9,6 +9,8 @@ class ImagePaths {
   static const IC_DELIVERY_NOW = '$kImagesPath/ic_delivery_now.png';
   static const IC_EVERYDAY = '$kImagesPath/ic_everyday.png';
   static const IC_MORE = '$kImagesPath/ic_more.png';
+  static const IC_ADD = '$kImagesPath/ic_add.png';
+  static const IC_SUBTRACT = '$kImagesPath/ic_subtract.png';
 }
 
 class Network {

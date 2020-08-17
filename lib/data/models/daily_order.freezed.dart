@@ -1,19 +1,20 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
-part of 'order.dart';
+part of 'daily_order.dart';
 
 // **************************************************************************
 // FreezedGenerator
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
-Order _$OrderFromJson(Map<String, dynamic> json) {
+
+DailyOrder _$DailyOrderFromJson(Map<String, dynamic> json) {
   return _Order.fromJson(json);
 }
 
-class _$OrderTearOff {
-  const _$OrderTearOff();
+class _$DailyOrderTearOff {
+  const _$DailyOrderTearOff();
 
   _Order call(
       {@JsonKey(name: 'Address')
@@ -60,18 +61,22 @@ class _$OrderTearOff {
 }
 
 // ignore: unused_element
-const $Order = _$OrderTearOff();
+const $DailyOrder = _$DailyOrderTearOff();
 
-mixin _$Order {
+mixin _$DailyOrder {
   @JsonKey(name: 'Address')
   String get address;
+
   @JsonKey(
       name: 'Amount', fromJson: fromStringJsonToInt, toJson: toIntToStringJson)
   int get amount;
+
   @JsonKey(name: 'Caffeine Level')
   String get caffeineLevel;
+
   @JsonKey(name: 'Created Date')
   DateTime get createDate;
+
   @JsonKey(name: 'Delivery Note')
   String get deliveryNote;
   @JsonKey(
@@ -89,22 +94,22 @@ mixin _$Order {
   String get sweetLevel;
 
   Map<String, dynamic> toJson();
-  $OrderCopyWith<Order> get copyWith;
+
+  $DailyOrderCopyWith<DailyOrder> get copyWith;
 }
 
-abstract class $OrderCopyWith<$Res> {
-  factory $OrderCopyWith(Order value, $Res Function(Order) then) =
-      _$OrderCopyWithImpl<$Res>;
-  $Res call(
-      {@JsonKey(name: 'Address')
-          String address,
-      @JsonKey(name: 'Amount', fromJson: fromStringJsonToInt, toJson: toIntToStringJson)
-          int amount,
-      @JsonKey(name: 'Caffeine Level')
-          String caffeineLevel,
-      @JsonKey(name: 'Created Date')
-          DateTime createDate,
-      @JsonKey(name: 'Delivery Note')
+abstract class $DailyOrderCopyWith<$Res> {
+  factory $DailyOrderCopyWith(DailyOrder value,
+      $Res Function(DailyOrder) then) =
+  _$DailyOrderCopyWithImpl<$Res>;
+
+  $Res call({@JsonKey(name: 'Address') String address,
+    @JsonKey(name: 'Amount',
+        fromJson: fromStringJsonToInt,
+        toJson: toIntToStringJson) int amount,
+    @JsonKey(name: 'Caffeine Level') String caffeineLevel,
+    @JsonKey(name: 'Created Date') DateTime createDate,
+    @JsonKey(name: 'Delivery Note')
           String deliveryNote,
       @JsonKey(name: 'No.', fromJson: fromStringJsonToInt, toJson: toIntToStringJson)
           int no,
@@ -120,12 +125,13 @@ abstract class $OrderCopyWith<$Res> {
           String sweetLevel});
 }
 
-class _$OrderCopyWithImpl<$Res> implements $OrderCopyWith<$Res> {
-  _$OrderCopyWithImpl(this._value, this._then);
+class _$DailyOrderCopyWithImpl<$Res> implements $DailyOrderCopyWith<$Res> {
+  _$DailyOrderCopyWithImpl(this._value, this._then);
 
-  final Order _value;
+  final DailyOrder _value;
+
   // ignore: unused_field
-  final $Res Function(Order) _then;
+  final $Res Function(DailyOrder) _then;
 
   @override
   $Res call({
@@ -163,17 +169,16 @@ class _$OrderCopyWithImpl<$Res> implements $OrderCopyWith<$Res> {
   }
 }
 
-abstract class _$OrderCopyWith<$Res> implements $OrderCopyWith<$Res> {
+abstract class _$OrderCopyWith<$Res> implements $DailyOrderCopyWith<$Res> {
   factory _$OrderCopyWith(_Order value, $Res Function(_Order) then) =
-      __$OrderCopyWithImpl<$Res>;
+  __$OrderCopyWithImpl<$Res>;
+
   @override
-  $Res call(
-      {@JsonKey(name: 'Address')
-          String address,
-      @JsonKey(name: 'Amount', fromJson: fromStringJsonToInt, toJson: toIntToStringJson)
-          int amount,
-      @JsonKey(name: 'Caffeine Level')
-          String caffeineLevel,
+  $Res call({@JsonKey(name: 'Address') String address,
+    @JsonKey(name: 'Amount',
+        fromJson: fromStringJsonToInt,
+        toJson: toIntToStringJson) int amount,
+    @JsonKey(name: 'Caffeine Level') String caffeineLevel,
       @JsonKey(name: 'Created Date')
           DateTime createDate,
       @JsonKey(name: 'Delivery Note')
@@ -192,7 +197,7 @@ abstract class _$OrderCopyWith<$Res> implements $OrderCopyWith<$Res> {
           String sweetLevel});
 }
 
-class __$OrderCopyWithImpl<$Res> extends _$OrderCopyWithImpl<$Res>
+class __$OrderCopyWithImpl<$Res> extends _$DailyOrderCopyWithImpl<$Res>
     implements _$OrderCopyWith<$Res> {
   __$OrderCopyWithImpl(_Order _value, $Res Function(_Order) _then)
       : super(_value, (v) => _then(v as _Order));
@@ -313,15 +318,14 @@ class _$_Order with DiagnosticableTreeMixin implements _Order {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'Order(address: $address, amount: $amount, caffeineLevel: $caffeineLevel, createDate: $createDate, deliveryNote: $deliveryNote, no: $no, orderNote: $orderNote, package: $package, phone: $phone, product: $product, sweetLevel: $sweetLevel)';
+    return 'DailyOrder(address: $address, amount: $amount, caffeineLevel: $caffeineLevel, createDate: $createDate, deliveryNote: $deliveryNote, no: $no, orderNote: $orderNote, package: $package, phone: $phone, product: $product, sweetLevel: $sweetLevel)';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'Order'))
-      ..add(DiagnosticsProperty('address', address))
+    properties..add(DiagnosticsProperty('type', 'DailyOrder'))..add(
+        DiagnosticsProperty('address', address))
       ..add(DiagnosticsProperty('amount', amount))
       ..add(DiagnosticsProperty('caffeineLevel', caffeineLevel))
       ..add(DiagnosticsProperty('createDate', createDate))
@@ -395,17 +399,13 @@ class _$_Order with DiagnosticableTreeMixin implements _Order {
   }
 }
 
-abstract class _Order implements Order {
-  factory _Order(
-      {@JsonKey(name: 'Address')
-          String address,
-      @JsonKey(name: 'Amount', fromJson: fromStringJsonToInt, toJson: toIntToStringJson)
-          int amount,
-      @required
-      @JsonKey(name: 'Caffeine Level')
-          String caffeineLevel,
-      @required
-      @JsonKey(name: 'Created Date')
+abstract class _Order implements DailyOrder {
+  factory _Order({@JsonKey(name: 'Address') String address,
+    @JsonKey(name: 'Amount',
+        fromJson: fromStringJsonToInt,
+        toJson: toIntToStringJson) int amount,
+    @required @JsonKey(name: 'Caffeine Level') String caffeineLevel,
+    @required @JsonKey(name: 'Created Date')
           DateTime createDate,
       @JsonKey(name: 'Delivery Note')
           String deliveryNote,

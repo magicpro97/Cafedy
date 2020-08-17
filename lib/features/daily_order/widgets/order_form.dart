@@ -2,14 +2,14 @@ import 'package:Cafedy/common/colorz.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 
+import '../../../common/widgets/delivery_form.dart';
 import '../../../data/models/caffeine_level.dart';
+import '../../../data/models/daily_order.dart';
 import '../../../data/models/option.dart';
-import '../../../data/models/order.dart';
 import '../../../data/models/order_type.dart';
 import '../../../data/models/package.dart';
 import '../../../data/models/product.dart';
 import '../../../data/models/sweet_level.dart';
-import 'delivery_form.dart';
 import 'option_selector.dart';
 import 'order_type_selector.dart';
 import 'product_slider.dart';
@@ -21,8 +21,8 @@ class OrderForm extends HookWidget {
   final List<Package> packages;
   final List<CaffeineLevel> caffeineLevels;
   final List<SweetLevel> sweetLevels;
-  final Function(Order) onSubmitOrder;
-  final Function(Order) onUpdateOrder;
+  final Function(DailyOrder) onSubmitOrder;
+  final Function(DailyOrder) onUpdateOrder;
 
   OrderForm({
     @required this.orderTypes,
@@ -100,7 +100,7 @@ class OrderForm extends HookWidget {
 
               if (currentOrderNo.value == 0) {
                 currentOrderNo.value = DateTime.now().millisecondsSinceEpoch;
-                onSubmitOrder?.call(Order(
+                onSubmitOrder?.call(DailyOrder(
                   address: address.value,
                   caffeineLevel: caffeineLevel.value.name,
                   createDate: DateTime.now(),
@@ -114,7 +114,7 @@ class OrderForm extends HookWidget {
                   package: package.value.name,
                 ));
               } else {
-                onUpdateOrder?.call(Order(
+                onUpdateOrder?.call(DailyOrder(
                   address: address.value,
                   caffeineLevel: caffeineLevel.value.name,
                   createDate: DateTime.now(),

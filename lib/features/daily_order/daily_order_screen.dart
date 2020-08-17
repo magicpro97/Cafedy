@@ -1,6 +1,5 @@
-import 'dart:developer';
-import 'dart:io';
-
+import 'package:Cafedy/common/widgets/error_dialog.dart';
+import 'package:Cafedy/common/widgets/loading.dart';
 import 'package:Cafedy/features/daily_order/daily_order_bloc.dart';
 import 'package:Cafedy/features/daily_order/widgets/order_form.dart';
 import 'package:Cafedy/routes.dart';
@@ -8,36 +7,16 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class OrderScreen extends StatelessWidget {
-  Widget loadingWidget(BuildContext context) => Container(
-        height: MediaQuery.of(context).size.height,
-        alignment: Alignment.center,
-        child: Platform.isIOS
-            ? CupertinoActivityIndicator()
-            : CircularProgressIndicator(),
-      );
-
+class DailyOrderScreen extends StatelessWidget {
   void goToResultScreen(BuildContext context) =>
       Navigator.pushNamed(context, Routes.RESULT_SCREEN);
 
   @override
   Widget build(BuildContext context) {
-    // ignore: close_sinks
-    final orderBloc = BlocProvider.of<OrderBloc>(context);
-
-    orderBloc.state.maybeWhen(
-      initial: () {
-        orderBloc.add(OrderAction.initialData());
-      },
-      orElse: () {},
-    );
-
-    return BlocListener<OrderBloc, OrderState>(
+    return BlocListener<DailyOrderBloc, DailyOrderState>(
+      cubit: context.bloc<DailyOrderBloc>(),
       listener: (context, state) {
         state.maybeWhen(
-          initial: () {
-            orderBloc.add(OrderAction.initialData());
-          },
           updated: () {
             goToResultScreen(context);
           },
@@ -45,29 +24,37 @@ class OrderScreen extends StatelessWidget {
             goToResultScreen(context);
           },
           error: (message) {
-            log(message);
+            showDialog(context: context, builder: (context) => ErrorDialog())
+                .then((value) => Navigator.pushNamed(
+                      context,
+                      Routes.MAIN_SCREEN,
+                    ));
           },
           orElse: () {},
         );
       },
-      child: BlocBuilder<OrderBloc, OrderState>(
+      child: BlocBuilder<DailyOrderBloc, DailyOrderState>(
+        cubit: context.bloc<DailyOrderBloc>(),
         builder: (context, state) {
           final widget = state.maybeWhen(
             loading: () => loadingWidget(context),
-            loaded: (store) =>
-                OrderForm(
-                  orderTypes: store.orderTypes,
-                  products: store.products,
-                  packages: store.packages,
-                  caffeineLevels: store.caffeineLevels,
-                  sweetLevels: store.sweetLevels,
-                  onSubmitOrder: (order) {
-                    orderBloc.add(OrderAction.submitOrder(order));
-                  },
-                  onUpdateOrder: (order) {
-                    orderBloc.add(OrderAction.updateOrder(order));
-                  },
-                ),
+            loaded: (store) => OrderForm(
+              orderTypes: store.orderTypes,
+              products: store.products,
+              packages: store.packages,
+              caffeineLevels: store.caffeineLevels,
+              sweetLevels: store.sweetLevels,
+              onSubmitOrder: (order) {
+                context
+                    .bloc<DailyOrderBloc>()
+                    .add(DailyOrderAction.submitOrder(order));
+              },
+              onUpdateOrder: (order) {
+                context
+                    .bloc<DailyOrderBloc>()
+                    .add(DailyOrderAction.updateOrder(order));
+              },
+            ),
             orElse: () => Container(),
           );
 

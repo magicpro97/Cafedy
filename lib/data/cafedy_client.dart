@@ -1,9 +1,10 @@
 import 'package:Cafedy/common/constants.dart';
+import 'package:Cafedy/data/models/delivery_order.dart';
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
 
 import 'models/caffeine_level.dart';
-import 'models/order.dart';
+import 'models/daily_order.dart';
 import 'models/order_type.dart';
 import 'models/package.dart';
 import 'models/product.dart';
@@ -35,8 +36,14 @@ abstract class CafedyClient {
   Future<List<Update>> fetchUpdate();
 
   @POST('/tabs/Orders')
-  Future<void> sendOrders(List<Order> order);
+  Future<void> sendDailyOrders(List<DailyOrder> order);
 
   @PATCH('/tabs/Orders')
-  Future<void> updateOrder(Order order);
+  Future<void> updateDailyOrder(DailyOrder order);
+
+  @POST('/tabs/DeliveryOrders')
+  Future<void> sendDeliveryOrder(List<DeliveryOrder> order);
+
+  @PATCH('/tabs/DeliveryOrders')
+  Future<void> updateDeliveryOrder(DeliveryOrder order);
 }

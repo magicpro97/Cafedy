@@ -2,6 +2,8 @@ import 'package:Cafedy/data/cache_repository.dart';
 import 'package:Cafedy/data/cafedy_client.dart';
 import 'package:Cafedy/features/daily_order/daily_order_bloc.dart';
 import 'package:Cafedy/features/daily_order/daily_order_screen.dart';
+import 'package:Cafedy/features/delivery_order/delivery_order_bloc.dart';
+import 'package:Cafedy/features/delivery_order/delivery_order_screen.dart';
 import 'package:Cafedy/features/main/widgets/app_tab_bar.dart';
 import 'package:Cafedy/features/more/more_screen.dart';
 import 'package:flutter/material.dart' hide Tab;
@@ -24,14 +26,24 @@ class MainScreen extends HookWidget {
         children: [
           BlocProvider(
             create: (context) {
-              final client = RepositoryProvider.of<CafedyClient>(context);
-              final cache = RepositoryProvider.of<CacheRepository>(context);
+              final client = context.repository<CafedyClient>();
+              final cache = context.repository<CacheRepository>();
 
-              return OrderBloc(client, cache);
+              return DailyOrderBloc(client, cache)
+                ..add(DailyOrderAction.initialData());
             },
-            child: OrderScreen(),
+            child: DailyOrderScreen(),
           ),
-          SizedBox(),
+          BlocProvider(
+            create: (context) {
+              final client = context.repository<CafedyClient>();
+              final cache = context.repository<CacheRepository>();
+
+              return DeliveryOrderBloc(client, cache)
+                ..add(DeliveryOrderAction.initialData());
+            },
+            child: DeliveryOrderScreen(),
+          ),
           MoreScreen(),
         ],
       ),
