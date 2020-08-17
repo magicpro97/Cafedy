@@ -30,6 +30,9 @@ _$_AppStore _$_$_AppStoreFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : OrderType.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    resultButtons: json['resultButtons'] == null
+        ? null
+        : ResultButton.fromJson(json['resultButtons'] as Map<String, dynamic>),
   );
 }
 
@@ -41,4 +44,5 @@ Map<String, dynamic> _$_$_AppStoreToJson(_$_AppStore instance) =>
       'caffeineLevels': instance.caffeineLevels,
       'sweetLevels': instance.sweetLevels,
       'orderTypes': instance.orderTypes,
+      'resultButtons': instance.resultButtons,
     };

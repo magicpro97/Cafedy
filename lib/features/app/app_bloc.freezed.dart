@@ -663,7 +663,8 @@ class _$AppStoreTearOff {
       List<Package> packages,
       List<CaffeineLevel> caffeineLevels,
       List<SweetLevel> sweetLevels,
-      List<OrderType> orderTypes}) {
+      List<OrderType> orderTypes,
+      ResultButton resultButtons}) {
     return _AppStore(
       updateVersion: updateVersion,
       products: products,
@@ -671,6 +672,7 @@ class _$AppStoreTearOff {
       caffeineLevels: caffeineLevels,
       sweetLevels: sweetLevels,
       orderTypes: orderTypes,
+      resultButtons: resultButtons,
     );
   }
 }
@@ -684,7 +686,10 @@ mixin _$AppStore {
   List<Package> get packages;
   List<CaffeineLevel> get caffeineLevels;
   List<SweetLevel> get sweetLevels;
+
   List<OrderType> get orderTypes;
+
+  ResultButton get resultButtons;
 
   Map<String, dynamic> toJson();
   $AppStoreCopyWith<AppStore> get copyWith;
@@ -692,14 +697,17 @@ mixin _$AppStore {
 
 abstract class $AppStoreCopyWith<$Res> {
   factory $AppStoreCopyWith(AppStore value, $Res Function(AppStore) then) =
-      _$AppStoreCopyWithImpl<$Res>;
-  $Res call(
-      {int updateVersion,
-      List<Product> products,
-      List<Package> packages,
-      List<CaffeineLevel> caffeineLevels,
-      List<SweetLevel> sweetLevels,
-      List<OrderType> orderTypes});
+  _$AppStoreCopyWithImpl<$Res>;
+
+  $Res call({int updateVersion,
+    List<Product> products,
+    List<Package> packages,
+    List<CaffeineLevel> caffeineLevels,
+    List<SweetLevel> sweetLevels,
+    List<OrderType> orderTypes,
+    ResultButton resultButtons});
+
+  $ResultButtonCopyWith<$Res> get resultButtons;
 }
 
 class _$AppStoreCopyWithImpl<$Res> implements $AppStoreCopyWith<$Res> {
@@ -717,6 +725,7 @@ class _$AppStoreCopyWithImpl<$Res> implements $AppStoreCopyWith<$Res> {
     Object caffeineLevels = freezed,
     Object sweetLevels = freezed,
     Object orderTypes = freezed,
+    Object resultButtons = freezed,
   }) {
     return _then(_value.copyWith(
       updateVersion: updateVersion == freezed
@@ -725,7 +734,7 @@ class _$AppStoreCopyWithImpl<$Res> implements $AppStoreCopyWith<$Res> {
       products:
           products == freezed ? _value.products : products as List<Product>,
       packages:
-          packages == freezed ? _value.packages : packages as List<Package>,
+      packages == freezed ? _value.packages : packages as List<Package>,
       caffeineLevels: caffeineLevels == freezed
           ? _value.caffeineLevels
           : caffeineLevels as List<CaffeineLevel>,
@@ -735,21 +744,38 @@ class _$AppStoreCopyWithImpl<$Res> implements $AppStoreCopyWith<$Res> {
       orderTypes: orderTypes == freezed
           ? _value.orderTypes
           : orderTypes as List<OrderType>,
+      resultButtons: resultButtons == freezed
+          ? _value.resultButtons
+          : resultButtons as ResultButton,
     ));
+  }
+
+  @override
+  $ResultButtonCopyWith<$Res> get resultButtons {
+    if (_value.resultButtons == null) {
+      return null;
+    }
+    return $ResultButtonCopyWith<$Res>(_value.resultButtons, (value) {
+      return _then(_value.copyWith(resultButtons: value));
+    });
   }
 }
 
 abstract class _$AppStoreCopyWith<$Res> implements $AppStoreCopyWith<$Res> {
   factory _$AppStoreCopyWith(_AppStore value, $Res Function(_AppStore) then) =
-      __$AppStoreCopyWithImpl<$Res>;
+  __$AppStoreCopyWithImpl<$Res>;
+
   @override
-  $Res call(
-      {int updateVersion,
-      List<Product> products,
-      List<Package> packages,
-      List<CaffeineLevel> caffeineLevels,
-      List<SweetLevel> sweetLevels,
-      List<OrderType> orderTypes});
+  $Res call({int updateVersion,
+    List<Product> products,
+    List<Package> packages,
+    List<CaffeineLevel> caffeineLevels,
+    List<SweetLevel> sweetLevels,
+    List<OrderType> orderTypes,
+    ResultButton resultButtons});
+
+  @override
+  $ResultButtonCopyWith<$Res> get resultButtons;
 }
 
 class __$AppStoreCopyWithImpl<$Res> extends _$AppStoreCopyWithImpl<$Res>
@@ -768,6 +794,7 @@ class __$AppStoreCopyWithImpl<$Res> extends _$AppStoreCopyWithImpl<$Res>
     Object caffeineLevels = freezed,
     Object sweetLevels = freezed,
     Object orderTypes = freezed,
+    Object resultButtons = freezed,
   }) {
     return _then(_AppStore(
       updateVersion: updateVersion == freezed
@@ -776,7 +803,7 @@ class __$AppStoreCopyWithImpl<$Res> extends _$AppStoreCopyWithImpl<$Res>
       products:
           products == freezed ? _value.products : products as List<Product>,
       packages:
-          packages == freezed ? _value.packages : packages as List<Package>,
+      packages == freezed ? _value.packages : packages as List<Package>,
       caffeineLevels: caffeineLevels == freezed
           ? _value.caffeineLevels
           : caffeineLevels as List<CaffeineLevel>,
@@ -786,19 +813,22 @@ class __$AppStoreCopyWithImpl<$Res> extends _$AppStoreCopyWithImpl<$Res>
       orderTypes: orderTypes == freezed
           ? _value.orderTypes
           : orderTypes as List<OrderType>,
+      resultButtons: resultButtons == freezed
+          ? _value.resultButtons
+          : resultButtons as ResultButton,
     ));
   }
 }
 
 @JsonSerializable()
 class _$_AppStore with DiagnosticableTreeMixin implements _AppStore {
-  _$_AppStore(
-      {this.updateVersion,
-      this.products,
-      this.packages,
-      this.caffeineLevels,
-      this.sweetLevels,
-      this.orderTypes});
+  _$_AppStore({this.updateVersion,
+    this.products,
+    this.packages,
+    this.caffeineLevels,
+    this.sweetLevels,
+    this.orderTypes,
+    this.resultButtons});
 
   factory _$_AppStore.fromJson(Map<String, dynamic> json) =>
       _$_$_AppStoreFromJson(json);
@@ -815,23 +845,25 @@ class _$_AppStore with DiagnosticableTreeMixin implements _AppStore {
   final List<SweetLevel> sweetLevels;
   @override
   final List<OrderType> orderTypes;
+  @override
+  final ResultButton resultButtons;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'AppStore(updateVersion: $updateVersion, products: $products, packages: $packages, caffeineLevels: $caffeineLevels, sweetLevels: $sweetLevels, orderTypes: $orderTypes)';
+    return 'AppStore(updateVersion: $updateVersion, products: $products, packages: $packages, caffeineLevels: $caffeineLevels, sweetLevels: $sweetLevels, orderTypes: $orderTypes, resultButtons: $resultButtons)';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'AppStore'))
-      ..add(DiagnosticsProperty('updateVersion', updateVersion))
-      ..add(DiagnosticsProperty('products', products))
-      ..add(DiagnosticsProperty('packages', packages))
-      ..add(DiagnosticsProperty('caffeineLevels', caffeineLevels))
-      ..add(DiagnosticsProperty('sweetLevels', sweetLevels))
-      ..add(DiagnosticsProperty('orderTypes', orderTypes));
+    properties..add(DiagnosticsProperty('type', 'AppStore'))..add(
+        DiagnosticsProperty('updateVersion', updateVersion))..add(
+        DiagnosticsProperty('products', products))..add(
+        DiagnosticsProperty('packages', packages))..add(
+        DiagnosticsProperty('caffeineLevels', caffeineLevels))..add(
+        DiagnosticsProperty('sweetLevels', sweetLevels))..add(
+        DiagnosticsProperty('orderTypes', orderTypes))..add(
+        DiagnosticsProperty('resultButtons', resultButtons));
   }
 
   @override
@@ -855,7 +887,10 @@ class _$_AppStore with DiagnosticableTreeMixin implements _AppStore {
                     .equals(other.sweetLevels, sweetLevels)) &&
             (identical(other.orderTypes, orderTypes) ||
                 const DeepCollectionEquality()
-                    .equals(other.orderTypes, orderTypes)));
+                    .equals(other.orderTypes, orderTypes)) &&
+            (identical(other.resultButtons, resultButtons) ||
+                const DeepCollectionEquality()
+                    .equals(other.resultButtons, resultButtons)));
   }
 
   @override
@@ -866,7 +901,8 @@ class _$_AppStore with DiagnosticableTreeMixin implements _AppStore {
       const DeepCollectionEquality().hash(packages) ^
       const DeepCollectionEquality().hash(caffeineLevels) ^
       const DeepCollectionEquality().hash(sweetLevels) ^
-      const DeepCollectionEquality().hash(orderTypes);
+      const DeepCollectionEquality().hash(orderTypes) ^
+      const DeepCollectionEquality().hash(resultButtons);
 
   @override
   _$AppStoreCopyWith<_AppStore> get copyWith =>
@@ -879,28 +915,37 @@ class _$_AppStore with DiagnosticableTreeMixin implements _AppStore {
 }
 
 abstract class _AppStore implements AppStore {
-  factory _AppStore(
-      {int updateVersion,
-      List<Product> products,
-      List<Package> packages,
-      List<CaffeineLevel> caffeineLevels,
-      List<SweetLevel> sweetLevels,
-      List<OrderType> orderTypes}) = _$_AppStore;
+  factory _AppStore({int updateVersion,
+    List<Product> products,
+    List<Package> packages,
+    List<CaffeineLevel> caffeineLevels,
+    List<SweetLevel> sweetLevels,
+    List<OrderType> orderTypes,
+    ResultButton resultButtons}) = _$_AppStore;
 
   factory _AppStore.fromJson(Map<String, dynamic> json) = _$_AppStore.fromJson;
 
   @override
   int get updateVersion;
+
   @override
   List<Product> get products;
+
   @override
   List<Package> get packages;
+
   @override
   List<CaffeineLevel> get caffeineLevels;
+
   @override
   List<SweetLevel> get sweetLevels;
+
   @override
   List<OrderType> get orderTypes;
+
+  @override
+  ResultButton get resultButtons;
+
   @override
   _$AppStoreCopyWith<_AppStore> get copyWith;
 }

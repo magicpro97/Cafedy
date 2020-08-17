@@ -1,3 +1,4 @@
+import 'package:Cafedy/data/models/result_button.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -12,7 +13,6 @@ import '../../data/models/product.dart';
 import '../../data/models/sweet_level.dart';
 
 part 'app_bloc.freezed.dart';
-
 part 'app_bloc.g.dart';
 
 @freezed
@@ -40,6 +40,7 @@ abstract class AppStore with _$AppStore {
     List<CaffeineLevel> caffeineLevels,
     List<SweetLevel> sweetLevels,
     List<OrderType> orderTypes,
+    ResultButton resultButtons,
   }) = _AppStore;
 
   factory AppStore.fromJson(Map<String, dynamic> json) =>
@@ -70,6 +71,7 @@ class AppBloc extends Bloc<AppAction, AppState> {
               _client.fetchSweetLevels(),
               _client.fetchOrderTypes(),
               _client.fetchPackages(),
+              _client.fetchResultButtons(),
             ]);
 
             final data = await _cacheRepository.saveAppStore(
@@ -80,6 +82,7 @@ class AppBloc extends Bloc<AppAction, AppState> {
                 sweetLevels: result[2],
                 orderTypes: result[3],
                 packages: result[4],
+                resultButtons: result[5][0],
               ).toJson(),
             );
 

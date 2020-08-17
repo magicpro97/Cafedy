@@ -1,5 +1,6 @@
 import 'package:Cafedy/common/constants.dart';
 import 'package:Cafedy/data/models/delivery_order.dart';
+import 'package:Cafedy/data/models/result_button.dart';
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
 
@@ -34,6 +35,9 @@ abstract class CafedyClient {
 
   @GET('/tabs/Update')
   Future<List<Update>> fetchUpdate();
+
+  @GET('/tabs/ResultButtons')
+  Future<List<ResultButton>> fetchResultButtons();
 
   @POST('/tabs/Orders')
   Future<void> sendDailyOrders(List<DailyOrder> order);

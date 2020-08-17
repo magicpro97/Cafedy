@@ -8,7 +8,6 @@ part of 'daily_order.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
-
 DailyOrder _$DailyOrderFromJson(Map<String, dynamic> json) {
   return _Order.fromJson(json);
 }
@@ -66,17 +65,13 @@ const $DailyOrder = _$DailyOrderTearOff();
 mixin _$DailyOrder {
   @JsonKey(name: 'Address')
   String get address;
-
   @JsonKey(
       name: 'Amount', fromJson: fromStringJsonToInt, toJson: toIntToStringJson)
   int get amount;
-
   @JsonKey(name: 'Caffeine Level')
   String get caffeineLevel;
-
   @JsonKey(name: 'Created Date')
   DateTime get createDate;
-
   @JsonKey(name: 'Delivery Note')
   String get deliveryNote;
   @JsonKey(
@@ -94,22 +89,24 @@ mixin _$DailyOrder {
   String get sweetLevel;
 
   Map<String, dynamic> toJson();
-
   $DailyOrderCopyWith<DailyOrder> get copyWith;
 }
 
 abstract class $DailyOrderCopyWith<$Res> {
-  factory $DailyOrderCopyWith(DailyOrder value,
-      $Res Function(DailyOrder) then) =
-  _$DailyOrderCopyWithImpl<$Res>;
+  factory $DailyOrderCopyWith(
+          DailyOrder value, $Res Function(DailyOrder) then) =
+      _$DailyOrderCopyWithImpl<$Res>;
 
-  $Res call({@JsonKey(name: 'Address') String address,
-    @JsonKey(name: 'Amount',
-        fromJson: fromStringJsonToInt,
-        toJson: toIntToStringJson) int amount,
-    @JsonKey(name: 'Caffeine Level') String caffeineLevel,
-    @JsonKey(name: 'Created Date') DateTime createDate,
-    @JsonKey(name: 'Delivery Note')
+  $Res call(
+      {@JsonKey(name: 'Address')
+          String address,
+      @JsonKey(name: 'Amount', fromJson: fromStringJsonToInt, toJson: toIntToStringJson)
+          int amount,
+      @JsonKey(name: 'Caffeine Level')
+          String caffeineLevel,
+      @JsonKey(name: 'Created Date')
+          DateTime createDate,
+      @JsonKey(name: 'Delivery Note')
           String deliveryNote,
       @JsonKey(name: 'No.', fromJson: fromStringJsonToInt, toJson: toIntToStringJson)
           int no,
@@ -129,7 +126,6 @@ class _$DailyOrderCopyWithImpl<$Res> implements $DailyOrderCopyWith<$Res> {
   _$DailyOrderCopyWithImpl(this._value, this._then);
 
   final DailyOrder _value;
-
   // ignore: unused_field
   final $Res Function(DailyOrder) _then;
 
@@ -179,16 +175,13 @@ abstract class _$OrderCopyWith<$Res> implements $DailyOrderCopyWith<$Res> {
         fromJson: fromStringJsonToInt,
         toJson: toIntToStringJson) int amount,
     @JsonKey(name: 'Caffeine Level') String caffeineLevel,
-      @JsonKey(name: 'Created Date')
-          DateTime createDate,
-      @JsonKey(name: 'Delivery Note')
-          String deliveryNote,
-      @JsonKey(name: 'No.', fromJson: fromStringJsonToInt, toJson: toIntToStringJson)
-          int no,
-      @JsonKey(name: 'Order Note')
-          String orderNote,
-      @JsonKey(name: 'Package')
-          String package,
+    @JsonKey(name: 'Created Date') DateTime createDate,
+    @JsonKey(name: 'Delivery Note') String deliveryNote,
+    @JsonKey(name: 'No.',
+        fromJson: fromStringJsonToInt,
+        toJson: toIntToStringJson) int no,
+    @JsonKey(name: 'Order Note') String orderNote,
+    @JsonKey(name: 'Package') String package,
       @JsonKey(name: 'Phone')
           String phone,
       @JsonKey(name: 'Product')
@@ -325,17 +318,17 @@ class _$_Order with DiagnosticableTreeMixin implements _Order {
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties..add(DiagnosticsProperty('type', 'DailyOrder'))..add(
-        DiagnosticsProperty('address', address))
-      ..add(DiagnosticsProperty('amount', amount))
-      ..add(DiagnosticsProperty('caffeineLevel', caffeineLevel))
-      ..add(DiagnosticsProperty('createDate', createDate))
-      ..add(DiagnosticsProperty('deliveryNote', deliveryNote))
-      ..add(DiagnosticsProperty('no', no))
-      ..add(DiagnosticsProperty('orderNote', orderNote))
-      ..add(DiagnosticsProperty('package', package))
-      ..add(DiagnosticsProperty('phone', phone))
-      ..add(DiagnosticsProperty('product', product))
-      ..add(DiagnosticsProperty('sweetLevel', sweetLevel));
+        DiagnosticsProperty('address', address))..add(
+        DiagnosticsProperty('amount', amount))..add(
+        DiagnosticsProperty('caffeineLevel', caffeineLevel))..add(
+        DiagnosticsProperty('createDate', createDate))..add(
+        DiagnosticsProperty('deliveryNote', deliveryNote))..add(
+        DiagnosticsProperty('no', no))..add(
+        DiagnosticsProperty('orderNote', orderNote))..add(
+        DiagnosticsProperty('package', package))..add(
+        DiagnosticsProperty('phone', phone))..add(
+        DiagnosticsProperty('product', product))..add(
+        DiagnosticsProperty('sweetLevel', sweetLevel));
   }
 
   @override
@@ -405,17 +398,13 @@ abstract class _Order implements DailyOrder {
         fromJson: fromStringJsonToInt,
         toJson: toIntToStringJson) int amount,
     @required @JsonKey(name: 'Caffeine Level') String caffeineLevel,
-    @required @JsonKey(name: 'Created Date')
-          DateTime createDate,
-      @JsonKey(name: 'Delivery Note')
-          String deliveryNote,
-      @required
-      @JsonKey(name: 'No.', fromJson: fromStringJsonToInt, toJson: toIntToStringJson)
-          int no,
-      @JsonKey(name: 'Order Note')
-          String orderNote,
-      @JsonKey(name: 'Package')
-          String package,
+    @required @JsonKey(name: 'Created Date') DateTime createDate,
+    @JsonKey(name: 'Delivery Note') String deliveryNote,
+    @required @JsonKey(name: 'No.',
+        fromJson: fromStringJsonToInt,
+        toJson: toIntToStringJson) int no,
+    @JsonKey(name: 'Order Note') String orderNote,
+    @JsonKey(name: 'Package') String package,
       @JsonKey(name: 'Phone')
           String phone,
       @required

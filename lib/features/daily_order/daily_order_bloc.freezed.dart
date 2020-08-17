@@ -39,7 +39,6 @@ mixin _$DailyOrderAction {
     @required Result submitOrder(DailyOrder order),
     @required Result updateOrder(DailyOrder order),
   });
-
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result initialData(),
@@ -73,7 +72,6 @@ class _$DailyOrderActionCopyWithImpl<$Res>
   _$DailyOrderActionCopyWithImpl(this._value, this._then);
 
   final DailyOrderAction _value;
-
   // ignore: unused_field
   final $Res Function(DailyOrderAction) _then;
 }
@@ -87,8 +85,8 @@ abstract class _$InitialDataCopyWith<$Res> {
 class __$InitialDataCopyWithImpl<$Res>
     extends _$DailyOrderActionCopyWithImpl<$Res>
     implements _$InitialDataCopyWith<$Res> {
-  __$InitialDataCopyWithImpl(_InitialData _value,
-      $Res Function(_InitialData) _then)
+  __$InitialDataCopyWithImpl(
+      _InitialData _value, $Res Function(_InitialData) _then)
       : super(_value, (v) => _then(v as _InitialData));
 
   @override
@@ -176,7 +174,6 @@ abstract class _$SubmitOrderCopyWith<$Res> {
   factory _$SubmitOrderCopyWith(
           _SubmitOrder value, $Res Function(_SubmitOrder) then) =
       __$SubmitOrderCopyWithImpl<$Res>;
-
   $Res call({DailyOrder order});
 
   $DailyOrderCopyWith<$Res> get order;
@@ -300,7 +297,6 @@ abstract class _SubmitOrder implements DailyOrderAction {
   factory _SubmitOrder(DailyOrder order) = _$_SubmitOrder;
 
   DailyOrder get order;
-
   _$SubmitOrderCopyWith<_SubmitOrder> get copyWith;
 }
 
@@ -308,7 +304,6 @@ abstract class _$UpdateOrderCopyWith<$Res> {
   factory _$UpdateOrderCopyWith(
           _UpdateOrder value, $Res Function(_UpdateOrder) then) =
       __$UpdateOrderCopyWithImpl<$Res>;
-
   $Res call({DailyOrder order});
 
   $DailyOrderCopyWith<$Res> get order;
@@ -432,7 +427,6 @@ abstract class _UpdateOrder implements DailyOrderAction {
   factory _UpdateOrder(DailyOrder order) = _$_UpdateOrder;
 
   DailyOrder get order;
-
   _$UpdateOrderCopyWith<_UpdateOrder> get copyWith;
 }
 
@@ -481,7 +475,6 @@ mixin _$DailyOrderState {
     @required Result updated(),
     @required Result error(String message),
   });
-
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result initial(),
@@ -524,7 +517,6 @@ class _$DailyOrderStateCopyWithImpl<$Res>
   _$DailyOrderStateCopyWithImpl(this._value, this._then);
 
   final DailyOrderState _value;
-
   // ignore: unused_field
   final $Res Function(DailyOrderState) _then;
 }
@@ -889,7 +881,6 @@ abstract class _Loaded implements DailyOrderState {
   const factory _Loaded(AppStore store) = _$_Loaded;
 
   AppStore get store;
-
   _$LoadedCopyWith<_Loaded> get copyWith;
 }
 
@@ -1242,6 +1233,5 @@ abstract class _Error implements DailyOrderState {
   const factory _Error({String message}) = _$_Error;
 
   String get message;
-
   _$ErrorCopyWith<_Error> get copyWith;
 }

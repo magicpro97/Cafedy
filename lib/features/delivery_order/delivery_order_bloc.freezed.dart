@@ -39,7 +39,6 @@ mixin _$DeliveryOrderAction {
     @required Result submit(DeliveryOrder order),
     @required Result update(DeliveryOrder order),
   });
-
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result initialData(),
@@ -47,14 +46,12 @@ mixin _$DeliveryOrderAction {
     Result update(DeliveryOrder order),
     @required Result orElse(),
   });
-
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result initialData(_InitialData value),
     @required Result submit(_Submit value),
     @required Result update(_Update value),
   });
-
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result initialData(_InitialData value),
@@ -75,7 +72,6 @@ class _$DeliveryOrderActionCopyWithImpl<$Res>
   _$DeliveryOrderActionCopyWithImpl(this._value, this._then);
 
   final DeliveryOrderAction _value;
-
   // ignore: unused_field
   final $Res Function(DeliveryOrderAction) _then;
 }
@@ -177,7 +173,6 @@ abstract class _InitialData implements DeliveryOrderAction {
 abstract class _$SubmitCopyWith<$Res> {
   factory _$SubmitCopyWith(_Submit value, $Res Function(_Submit) then) =
       __$SubmitCopyWithImpl<$Res>;
-
   $Res call({DeliveryOrder order});
 
   $DeliveryOrderCopyWith<$Res> get order;
@@ -300,14 +295,12 @@ abstract class _Submit implements DeliveryOrderAction {
   factory _Submit(DeliveryOrder order) = _$_Submit;
 
   DeliveryOrder get order;
-
   _$SubmitCopyWith<_Submit> get copyWith;
 }
 
 abstract class _$UpdateCopyWith<$Res> {
   factory _$UpdateCopyWith(_Update value, $Res Function(_Update) then) =
       __$UpdateCopyWithImpl<$Res>;
-
   $Res call({DeliveryOrder order});
 
   $DeliveryOrderCopyWith<$Res> get order;
@@ -430,7 +423,6 @@ abstract class _Update implements DeliveryOrderAction {
   factory _Update(DeliveryOrder order) = _$_Update;
 
   DeliveryOrder get order;
-
   _$UpdateCopyWith<_Update> get copyWith;
 }
 
@@ -474,7 +466,6 @@ mixin _$DeliveryOrderState {
     @required Result submitted(),
     @required Result error(String message),
   });
-
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result initial(),
@@ -484,7 +475,6 @@ mixin _$DeliveryOrderState {
     Result error(String message),
     @required Result orElse(),
   });
-
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result initial(_Initial value),
@@ -493,7 +483,6 @@ mixin _$DeliveryOrderState {
     @required Result submitted(_Submitted value),
     @required Result error(_Error value),
   });
-
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result initial(_Initial value),
@@ -516,7 +505,6 @@ class _$DeliveryOrderStateCopyWithImpl<$Res>
   _$DeliveryOrderStateCopyWithImpl(this._value, this._then);
 
   final DeliveryOrderState _value;
-
   // ignore: unused_field
   final $Res Function(DeliveryOrderState) _then;
 }
@@ -732,7 +720,6 @@ abstract class _Loading implements DeliveryOrderState {
 abstract class _$LoadedCopyWith<$Res> {
   factory _$LoadedCopyWith(_Loaded value, $Res Function(_Loaded) then) =
       __$LoadedCopyWithImpl<$Res>;
-
   $Res call({AppStore appStore});
 
   $AppStoreCopyWith<$Res> get appStore;
@@ -867,7 +854,6 @@ abstract class _Loaded implements DeliveryOrderState {
   factory _Loaded(AppStore appStore) = _$_Loaded;
 
   AppStore get appStore;
-
   _$LoadedCopyWith<_Loaded> get copyWith;
 }
 
@@ -979,7 +965,6 @@ abstract class _Submitted implements DeliveryOrderState {
 abstract class _$ErrorCopyWith<$Res> {
   factory _$ErrorCopyWith(_Error value, $Res Function(_Error) then) =
       __$ErrorCopyWithImpl<$Res>;
-
   $Res call({String message});
 }
 
@@ -1101,6 +1086,5 @@ abstract class _Error implements DeliveryOrderState {
   factory _Error({String message}) = _$_Error;
 
   String get message;
-
   _$ErrorCopyWith<_Error> get copyWith;
 }

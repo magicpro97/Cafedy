@@ -49,7 +49,11 @@ class MyApp extends StatelessWidget {
           initialRoute: Routes.SPLASH_SCREEN,
           routes: {
             Routes.SPLASH_SCREEN: (_) => SplashScreen(),
-            Routes.RESULT_SCREEN: (_) => ResultScreen(),
+            Routes.RESULT_SCREEN: (context) {
+              final cache = RepositoryProvider.of<CacheRepository>(context);
+
+              return ResultScreen(cache.getAppStore().resultButtons);
+            },
             Routes.MAIN_SCREEN: (_) => MainScreen(),
           },
         ),
