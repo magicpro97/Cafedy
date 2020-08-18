@@ -3,7 +3,6 @@ import 'package:Cafedy/common/constants.dart';
 import 'package:Cafedy/common/dimen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class AppTabBar extends PreferredSize {
   final Function onTabChange;
@@ -16,12 +15,12 @@ class AppTabBar extends PreferredSize {
       child: Column(
         children: [
           SizedBox(height: Dimens.NORMAL_SPACE),
-          SvgPicture.asset(
-            ImagePaths.IC_LOGO,
-            fit: BoxFit.contain,
-            height: 24.0,
-          ),
-          SizedBox(height: Dimens.LARGE_SPACE),
+//          SvgPicture.asset(
+//            ImagePaths.IC_LOGO,
+//            fit: BoxFit.contain,
+//            height: 24.0,
+//          ),
+//          SizedBox(height: Dimens.LARGE_SPACE),
           _TabBar(
             onTabChange: onTabChange,
           ),
@@ -35,7 +34,7 @@ class AppTabBar extends PreferredSize {
   }
 
   @override
-  Size get preferredSize => Size.fromHeight(179.0);
+  Size get preferredSize => Size.fromHeight(125.0);
 }
 
 enum Tab {
@@ -58,7 +57,7 @@ class _TabBar extends HookWidget {
         TableRow(children: [
           _TabItem(
             imagePath: ImagePaths.IC_EVERYDAY,
-            title: 'Hằng ngày',
+            title: 'Mỗi ngày',
             onPressed: () {
               currentTab.value = Tab.EVERYDAY;
               onTabChange?.call(Tab.EVERYDAY);

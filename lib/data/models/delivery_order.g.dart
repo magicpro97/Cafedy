@@ -18,6 +18,8 @@ _$_DeliveryOrder _$_$_DeliveryOrderFromJson(Map<String, dynamic> json) {
     mix: json['Bạc Sỉu'] as String,
     phone: json['Phone'] as String,
     address: json['Address'] as String,
+    promoCode: json['Promo Code'] as String,
+    name: json['Name'] as String,
   );
 }
 
@@ -31,4 +33,6 @@ Map<String, dynamic> _$_$_DeliveryOrderToJson(_$_DeliveryOrder instance) =>
       'Bạc Sỉu': instance.mix,
       'Phone': instance.phone,
       'Address': instance.address,
+      'Promo Code': instance.promoCode,
+      'Name': instance.name,
     };

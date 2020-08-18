@@ -686,9 +686,7 @@ mixin _$AppStore {
   List<Package> get packages;
   List<CaffeineLevel> get caffeineLevels;
   List<SweetLevel> get sweetLevels;
-
   List<OrderType> get orderTypes;
-
   ResultButton get resultButtons;
 
   Map<String, dynamic> toJson();
@@ -697,15 +695,16 @@ mixin _$AppStore {
 
 abstract class $AppStoreCopyWith<$Res> {
   factory $AppStoreCopyWith(AppStore value, $Res Function(AppStore) then) =
-  _$AppStoreCopyWithImpl<$Res>;
+      _$AppStoreCopyWithImpl<$Res>;
 
-  $Res call({int updateVersion,
-    List<Product> products,
-    List<Package> packages,
-    List<CaffeineLevel> caffeineLevels,
-    List<SweetLevel> sweetLevels,
-    List<OrderType> orderTypes,
-    ResultButton resultButtons});
+  $Res call(
+      {int updateVersion,
+      List<Product> products,
+      List<Package> packages,
+      List<CaffeineLevel> caffeineLevels,
+      List<SweetLevel> sweetLevels,
+      List<OrderType> orderTypes,
+      ResultButton resultButtons});
 
   $ResultButtonCopyWith<$Res> get resultButtons;
 }
@@ -732,7 +731,7 @@ class _$AppStoreCopyWithImpl<$Res> implements $AppStoreCopyWith<$Res> {
           ? _value.updateVersion
           : updateVersion as int,
       products:
-          products == freezed ? _value.products : products as List<Product>,
+      products == freezed ? _value.products : products as List<Product>,
       packages:
       packages == freezed ? _value.packages : packages as List<Package>,
       caffeineLevels: caffeineLevels == freezed
@@ -801,7 +800,7 @@ class __$AppStoreCopyWithImpl<$Res> extends _$AppStoreCopyWithImpl<$Res>
           ? _value.updateVersion
           : updateVersion as int,
       products:
-          products == freezed ? _value.products : products as List<Product>,
+      products == freezed ? _value.products : products as List<Product>,
       packages:
       packages == freezed ? _value.packages : packages as List<Package>,
       caffeineLevels: caffeineLevels == freezed
@@ -936,16 +935,12 @@ abstract class _AppStore implements AppStore {
 
   @override
   List<CaffeineLevel> get caffeineLevels;
-
   @override
   List<SweetLevel> get sweetLevels;
-
   @override
   List<OrderType> get orderTypes;
-
   @override
   ResultButton get resultButtons;
-
   @override
   _$AppStoreCopyWith<_AppStore> get copyWith;
 }

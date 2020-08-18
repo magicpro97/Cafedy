@@ -1,4 +1,6 @@
 import 'package:Cafedy/common/colorz.dart';
+import 'package:Cafedy/common/dimen.dart';
+import 'package:Cafedy/common/input_formatter/uppercase_formatter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 
@@ -37,8 +39,10 @@ class OrderForm extends HookWidget {
   @override
   Widget build(BuildContext context) {
     final currentOrderNo = useState(0);
-    final selectedProduct = useState(products[0]);
-    final selectedType = useState(orderTypes[0]);
+    final selectedProduct =
+        useState(products.isNotEmpty ? products.first : null);
+    final selectedType =
+        useState(orderTypes.isNotEmpty ? orderTypes.first : null);
     final sweetLevel = useState<SweetLevel>(null);
     final caffeineLevel = useState<CaffeineLevel>(null);
     final orderNote = useState('');
@@ -47,6 +51,8 @@ class OrderForm extends HookWidget {
     final phone = useState('');
     final address = useState('');
     final deliveryNote = useState('');
+    final promoCode = useState('');
+    final name = useState('');
 
     final typeOptions =
         orderTypes.where((e) => e.active).map((e) => Option(e.name)).toList();
@@ -74,7 +80,7 @@ class OrderForm extends HookWidget {
           ),
           OrderTypeSelector(
             types: typeOptions,
-            selectedType: typeOptions[0],
+            selectedType: typeOptions.isNotEmpty ? typeOptions.first : null,
             packages: packages,
             selectedPackage: package.value,
             onOptionChange: (index) => selectedType.value = orderTypes[index],
@@ -85,6 +91,26 @@ class OrderForm extends HookWidget {
             onNoteChange: (value) => deliveryNote.value = value,
             onAddressChange: (value) => address.value = value,
             onPhoneChange: (value) => phone.value = value,
+            onReceiverNameChange: (value) => name.value = value,
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(
+              Dimens.LARGE_SPACE,
+              0,
+              Dimens.LARGE_SPACE,
+              Dimens.LARGE_SPACE,
+            ),
+            child: TextField(
+              keyboardType: TextInputType.phone,
+              decoration: InputDecoration(
+                hintText: 'Nhập mã khuyến mãi',
+                border: OutlineInputBorder(),
+              ),
+              onChanged: (value) => promoCode.value = value,
+              inputFormatters: [
+                UpperCaseFormatter(),
+              ],
+            ),
           ),
           RoundedButton(
             label: 'Gửi',
@@ -92,8 +118,15 @@ class OrderForm extends HookWidget {
             textColor: Colors.white,
             onPress: () {
               if (caffeineLevel.value == null ||
-                  address.value.trim().isEmpty ||
-                  phone.value.trim().isEmpty) return;
+                  address.value
+                      .trim()
+                      .isEmpty ||
+                  phone.value
+                      .trim()
+                      .isEmpty ||
+                  name.value
+                      .trim()
+                      .isEmpty) return;
 
               if (selectedType.value.type == OType.PACKAGE &&
                   package.value == null) return;
@@ -112,6 +145,8 @@ class OrderForm extends HookWidget {
                   deliveryNote: deliveryNote.value,
                   orderNote: orderNote.value,
                   package: package.value.name,
+                  name: name.value,
+                  promoCode: promoCode.value,
                 ));
               } else {
                 onUpdateOrder?.call(DailyOrder(
@@ -126,6 +161,8 @@ class OrderForm extends HookWidget {
                   deliveryNote: deliveryNote.value,
                   orderNote: orderNote.value,
                   package: package.value.name,
+                  name: name.value,
+                  promoCode: promoCode.value,
                 ));
               }
             },

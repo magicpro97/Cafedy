@@ -7,16 +7,19 @@ class DeliveryForm extends HookWidget {
   final void Function(String) onPhoneChange;
   final void Function(String) onAddressChange;
   final void Function(String) onNoteChange;
+  final void Function(String) onReceiverNameChange;
 
   const DeliveryForm({
     Key key,
     this.onPhoneChange,
     this.onAddressChange,
     this.onNoteChange,
+    this.onReceiverNameChange,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final isReceiverNameValid = useState(false);
     final isPhoneValid = useState(false);
     final isAddressValid = useState(false);
 
@@ -25,6 +28,21 @@ class DeliveryForm extends HookWidget {
       child: Column(
         children: <Widget>[
           SizedBox(height: Dimens.XLARGE_SPACE),
+          Container(
+            color: Colors.white,
+            child: TextField(
+              decoration: InputDecoration(
+                hintText: 'Tên người nhận',
+                border: OutlineInputBorder(),
+                errorText: isReceiverNameValid.value ? null : '*Bắt buộc',
+              ),
+              onChanged: (value) {
+                onReceiverNameChange?.call(value);
+                isReceiverNameValid.value = value.isNotEmpty;
+              },
+            ),
+          ),
+          SizedBox(height: Dimens.LARGE_SPACE),
           Container(
             color: Colors.white,
             child: TextField(

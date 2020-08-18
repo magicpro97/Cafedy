@@ -42,7 +42,12 @@ class _$DailyOrderTearOff {
           String product,
       @required
       @JsonKey(name: 'Sweet Level')
-          String sweetLevel}) {
+          String sweetLevel,
+      @JsonKey(name: 'Promo Code')
+          String promoCode,
+      @required
+      @JsonKey(name: 'Name')
+          String name}) {
     return _Order(
       address: address,
       amount: amount,
@@ -55,6 +60,8 @@ class _$DailyOrderTearOff {
       phone: phone,
       product: product,
       sweetLevel: sweetLevel,
+      promoCode: promoCode,
+      name: name,
     );
   }
 }
@@ -77,18 +84,30 @@ mixin _$DailyOrder {
   @JsonKey(
       name: 'No.', fromJson: fromStringJsonToInt, toJson: toIntToStringJson)
   int get no;
+
   @JsonKey(name: 'Order Note')
   String get orderNote;
+
   @JsonKey(name: 'Package')
   String get package;
+
   @JsonKey(name: 'Phone')
   String get phone;
+
   @JsonKey(name: 'Product')
   String get product;
+
   @JsonKey(name: 'Sweet Level')
   String get sweetLevel;
 
+  @JsonKey(name: 'Promo Code')
+  String get promoCode;
+
+  @JsonKey(name: 'Name')
+  String get name;
+
   Map<String, dynamic> toJson();
+
   $DailyOrderCopyWith<DailyOrder> get copyWith;
 }
 
@@ -96,7 +115,6 @@ abstract class $DailyOrderCopyWith<$Res> {
   factory $DailyOrderCopyWith(
           DailyOrder value, $Res Function(DailyOrder) then) =
       _$DailyOrderCopyWithImpl<$Res>;
-
   $Res call(
       {@JsonKey(name: 'Address')
           String address,
@@ -108,18 +126,14 @@ abstract class $DailyOrderCopyWith<$Res> {
           DateTime createDate,
       @JsonKey(name: 'Delivery Note')
           String deliveryNote,
-      @JsonKey(name: 'No.', fromJson: fromStringJsonToInt, toJson: toIntToStringJson)
-          int no,
-      @JsonKey(name: 'Order Note')
-          String orderNote,
-      @JsonKey(name: 'Package')
-          String package,
-      @JsonKey(name: 'Phone')
-          String phone,
-      @JsonKey(name: 'Product')
-          String product,
-      @JsonKey(name: 'Sweet Level')
-          String sweetLevel});
+      @JsonKey(name: 'No.', fromJson: fromStringJsonToInt, toJson: toIntToStringJson) int no,
+        @JsonKey(name: 'Order Note') String orderNote,
+        @JsonKey(name: 'Package') String package,
+        @JsonKey(name: 'Phone') String phone,
+        @JsonKey(name: 'Product') String product,
+        @JsonKey(name: 'Sweet Level') String sweetLevel,
+        @JsonKey(name: 'Promo Code') String promoCode,
+        @JsonKey(name: 'Name') String name});
 }
 
 class _$DailyOrderCopyWithImpl<$Res> implements $DailyOrderCopyWith<$Res> {
@@ -142,6 +156,8 @@ class _$DailyOrderCopyWithImpl<$Res> implements $DailyOrderCopyWith<$Res> {
     Object phone = freezed,
     Object product = freezed,
     Object sweetLevel = freezed,
+    Object promoCode = freezed,
+    Object name = freezed,
   }) {
     return _then(_value.copyWith(
       address: address == freezed ? _value.address : address as String,
@@ -160,7 +176,9 @@ class _$DailyOrderCopyWithImpl<$Res> implements $DailyOrderCopyWith<$Res> {
       phone: phone == freezed ? _value.phone : phone as String,
       product: product == freezed ? _value.product : product as String,
       sweetLevel:
-          sweetLevel == freezed ? _value.sweetLevel : sweetLevel as String,
+      sweetLevel == freezed ? _value.sweetLevel : sweetLevel as String,
+      promoCode: promoCode == freezed ? _value.promoCode : promoCode as String,
+      name: name == freezed ? _value.name : name as String,
     ));
   }
 }
@@ -182,12 +200,11 @@ abstract class _$OrderCopyWith<$Res> implements $DailyOrderCopyWith<$Res> {
         toJson: toIntToStringJson) int no,
     @JsonKey(name: 'Order Note') String orderNote,
     @JsonKey(name: 'Package') String package,
-      @JsonKey(name: 'Phone')
-          String phone,
-      @JsonKey(name: 'Product')
-          String product,
-      @JsonKey(name: 'Sweet Level')
-          String sweetLevel});
+    @JsonKey(name: 'Phone') String phone,
+    @JsonKey(name: 'Product') String product,
+    @JsonKey(name: 'Sweet Level') String sweetLevel,
+    @JsonKey(name: 'Promo Code') String promoCode,
+    @JsonKey(name: 'Name') String name});
 }
 
 class __$OrderCopyWithImpl<$Res> extends _$DailyOrderCopyWithImpl<$Res>
@@ -211,6 +228,8 @@ class __$OrderCopyWithImpl<$Res> extends _$DailyOrderCopyWithImpl<$Res>
     Object phone = freezed,
     Object product = freezed,
     Object sweetLevel = freezed,
+    Object promoCode = freezed,
+    Object name = freezed,
   }) {
     return _then(_Order(
       address: address == freezed ? _value.address : address as String,
@@ -229,7 +248,9 @@ class __$OrderCopyWithImpl<$Res> extends _$DailyOrderCopyWithImpl<$Res>
       phone: phone == freezed ? _value.phone : phone as String,
       product: product == freezed ? _value.product : product as String,
       sweetLevel:
-          sweetLevel == freezed ? _value.sweetLevel : sweetLevel as String,
+      sweetLevel == freezed ? _value.sweetLevel : sweetLevel as String,
+      promoCode: promoCode == freezed ? _value.promoCode : promoCode as String,
+      name: name == freezed ? _value.name : name as String,
     ));
   }
 }
@@ -252,23 +273,19 @@ class _$_Order with DiagnosticableTreeMixin implements _Order {
       @required
       @JsonKey(name: 'No.', fromJson: fromStringJsonToInt, toJson: toIntToStringJson)
           this.no,
-      @JsonKey(name: 'Order Note')
-          this.orderNote,
-      @JsonKey(name: 'Package')
-          this.package,
-      @JsonKey(name: 'Phone')
-          this.phone,
-      @required
-      @JsonKey(name: 'Product')
-          this.product,
-      @required
-      @JsonKey(name: 'Sweet Level')
-          this.sweetLevel})
+      @JsonKey(name: 'Order Note') this.orderNote,
+        @JsonKey(name: 'Package') this.package,
+        @JsonKey(name: 'Phone') this.phone,
+        @required @JsonKey(name: 'Product') this.product,
+        @required @JsonKey(name: 'Sweet Level') this.sweetLevel,
+        @JsonKey(name: 'Promo Code') this.promoCode,
+        @required @JsonKey(name: 'Name') this.name})
       : assert(caffeineLevel != null),
         assert(createDate != null),
         assert(no != null),
         assert(product != null),
-        assert(sweetLevel != null);
+        assert(sweetLevel != null),
+        assert(name != null);
 
   factory _$_Order.fromJson(Map<String, dynamic> json) =>
       _$_$_OrderFromJson(json);
@@ -308,10 +325,16 @@ class _$_Order with DiagnosticableTreeMixin implements _Order {
   @override
   @JsonKey(name: 'Sweet Level')
   final String sweetLevel;
+  @override
+  @JsonKey(name: 'Promo Code')
+  final String promoCode;
+  @override
+  @JsonKey(name: 'Name')
+  final String name;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'DailyOrder(address: $address, amount: $amount, caffeineLevel: $caffeineLevel, createDate: $createDate, deliveryNote: $deliveryNote, no: $no, orderNote: $orderNote, package: $package, phone: $phone, product: $product, sweetLevel: $sweetLevel)';
+    return 'DailyOrder(address: $address, amount: $amount, caffeineLevel: $caffeineLevel, createDate: $createDate, deliveryNote: $deliveryNote, no: $no, orderNote: $orderNote, package: $package, phone: $phone, product: $product, sweetLevel: $sweetLevel, promoCode: $promoCode, name: $name)';
   }
 
   @override
@@ -328,7 +351,9 @@ class _$_Order with DiagnosticableTreeMixin implements _Order {
         DiagnosticsProperty('package', package))..add(
         DiagnosticsProperty('phone', phone))..add(
         DiagnosticsProperty('product', product))..add(
-        DiagnosticsProperty('sweetLevel', sweetLevel));
+        DiagnosticsProperty('sweetLevel', sweetLevel))..add(
+        DiagnosticsProperty('promoCode', promoCode))..add(
+        DiagnosticsProperty('name', name));
   }
 
   @override
@@ -364,7 +389,12 @@ class _$_Order with DiagnosticableTreeMixin implements _Order {
                     .equals(other.product, product)) &&
             (identical(other.sweetLevel, sweetLevel) ||
                 const DeepCollectionEquality()
-                    .equals(other.sweetLevel, sweetLevel)));
+                    .equals(other.sweetLevel, sweetLevel)) &&
+            (identical(other.promoCode, promoCode) ||
+                const DeepCollectionEquality()
+                    .equals(other.promoCode, promoCode)) &&
+            (identical(other.name, name) ||
+                const DeepCollectionEquality().equals(other.name, name)));
   }
 
   @override
@@ -380,7 +410,9 @@ class _$_Order with DiagnosticableTreeMixin implements _Order {
       const DeepCollectionEquality().hash(package) ^
       const DeepCollectionEquality().hash(phone) ^
       const DeepCollectionEquality().hash(product) ^
-      const DeepCollectionEquality().hash(sweetLevel);
+      const DeepCollectionEquality().hash(sweetLevel) ^
+      const DeepCollectionEquality().hash(promoCode) ^
+      const DeepCollectionEquality().hash(name);
 
   @override
   _$OrderCopyWith<_Order> get copyWith =>
@@ -405,14 +437,11 @@ abstract class _Order implements DailyOrder {
         toJson: toIntToStringJson) int no,
     @JsonKey(name: 'Order Note') String orderNote,
     @JsonKey(name: 'Package') String package,
-      @JsonKey(name: 'Phone')
-          String phone,
-      @required
-      @JsonKey(name: 'Product')
-          String product,
-      @required
-      @JsonKey(name: 'Sweet Level')
-          String sweetLevel}) = _$_Order;
+    @JsonKey(name: 'Phone') String phone,
+    @required @JsonKey(name: 'Product') String product,
+    @required @JsonKey(name: 'Sweet Level') String sweetLevel,
+    @JsonKey(name: 'Promo Code') String promoCode,
+    @required @JsonKey(name: 'Name') String name}) = _$_Order;
 
   factory _Order.fromJson(Map<String, dynamic> json) = _$_Order.fromJson;
 
@@ -442,15 +471,27 @@ abstract class _Order implements DailyOrder {
   @override
   @JsonKey(name: 'Package')
   String get package;
+
   @override
   @JsonKey(name: 'Phone')
   String get phone;
+
   @override
   @JsonKey(name: 'Product')
   String get product;
+
   @override
   @JsonKey(name: 'Sweet Level')
   String get sweetLevel;
+
+  @override
+  @JsonKey(name: 'Promo Code')
+  String get promoCode;
+
+  @override
+  @JsonKey(name: 'Name')
+  String get name;
+
   @override
   _$OrderCopyWith<_Order> get copyWith;
 }

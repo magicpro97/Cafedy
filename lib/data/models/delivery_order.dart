@@ -2,7 +2,6 @@ import 'package:Cafedy/top_level.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'delivery_order.freezed.dart';
-
 part 'delivery_order.g.dart';
 
 @freezed
@@ -36,6 +35,11 @@ abstract class DeliveryOrder with _$DeliveryOrder {
     @JsonKey(name: 'Address')
     @required
         String address,
+    @JsonKey(name: "Promo Code")
+        String promoCode,
+    @JsonKey(name: 'Name')
+    @required
+        String name,
   }) = _DeliveryOrder;
 
   factory DeliveryOrder.fromJson(Map<String, dynamic> json) =>

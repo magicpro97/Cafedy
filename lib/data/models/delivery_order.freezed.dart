@@ -8,7 +8,6 @@ part of 'delivery_order.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
-
 DeliveryOrder _$DeliveryOrderFromJson(Map<String, dynamic> json) {
   return _DeliveryOrder.fromJson(json);
 }
@@ -40,7 +39,12 @@ class _$DeliveryOrderTearOff {
           String phone,
       @required
       @JsonKey(name: 'Address')
-          String address}) {
+          String address,
+      @JsonKey(name: 'Promo Code')
+          String promoCode,
+      @required
+      @JsonKey(name: 'Name')
+          String name}) {
     return _DeliveryOrder(
       no: no,
       createDate: createDate,
@@ -50,6 +54,8 @@ class _$DeliveryOrderTearOff {
       mix: mix,
       phone: phone,
       address: address,
+      promoCode: promoCode,
+      name: name,
     );
   }
 }
@@ -61,10 +67,8 @@ mixin _$DeliveryOrder {
   @JsonKey(
       name: 'No.', fromJson: fromStringJsonToInt, toJson: toIntToStringJson)
   int get no;
-
   @JsonKey(name: 'Created Date')
   DateTime get createDate;
-
   @JsonKey(name: 'Delivery Note')
   String get deliveryNote;
 
@@ -83,6 +87,12 @@ mixin _$DeliveryOrder {
   @JsonKey(name: 'Address')
   String get address;
 
+  @JsonKey(name: 'Promo Code')
+  String get promoCode;
+
+  @JsonKey(name: 'Name')
+  String get name;
+
   Map<String, dynamic> toJson();
 
   $DeliveryOrderCopyWith<DeliveryOrder> get copyWith;
@@ -92,24 +102,19 @@ abstract class $DeliveryOrderCopyWith<$Res> {
   factory $DeliveryOrderCopyWith(
           DeliveryOrder value, $Res Function(DeliveryOrder) then) =
       _$DeliveryOrderCopyWithImpl<$Res>;
-
   $Res call(
       {@JsonKey(name: 'No.', fromJson: fromStringJsonToInt, toJson: toIntToStringJson)
           int no,
       @JsonKey(name: 'Created Date')
           DateTime createDate,
-      @JsonKey(name: 'Delivery Note')
-          String deliveryNote,
-      @JsonKey(name: 'Cafe Đen Đá')
-          String black,
-      @JsonKey(name: 'Cafe Sữa Đá')
-          String milk,
-      @JsonKey(name: 'Bạc Sỉu')
-          String mix,
-      @JsonKey(name: 'Phone')
-          String phone,
-      @JsonKey(name: 'Address')
-          String address});
+      @JsonKey(name: 'Delivery Note') String deliveryNote,
+        @JsonKey(name: 'Cafe Đen Đá') String black,
+        @JsonKey(name: 'Cafe Sữa Đá') String milk,
+        @JsonKey(name: 'Bạc Sỉu') String mix,
+        @JsonKey(name: 'Phone') String phone,
+        @JsonKey(name: 'Address') String address,
+        @JsonKey(name: 'Promo Code') String promoCode,
+        @JsonKey(name: 'Name') String name});
 }
 
 class _$DeliveryOrderCopyWithImpl<$Res>
@@ -117,7 +122,6 @@ class _$DeliveryOrderCopyWithImpl<$Res>
   _$DeliveryOrderCopyWithImpl(this._value, this._then);
 
   final DeliveryOrder _value;
-
   // ignore: unused_field
   final $Res Function(DeliveryOrder) _then;
 
@@ -131,11 +135,13 @@ class _$DeliveryOrderCopyWithImpl<$Res>
     Object mix = freezed,
     Object phone = freezed,
     Object address = freezed,
+    Object promoCode = freezed,
+    Object name = freezed,
   }) {
     return _then(_value.copyWith(
       no: no == freezed ? _value.no : no as int,
       createDate:
-          createDate == freezed ? _value.createDate : createDate as DateTime,
+      createDate == freezed ? _value.createDate : createDate as DateTime,
       deliveryNote: deliveryNote == freezed
           ? _value.deliveryNote
           : deliveryNote as String,
@@ -144,6 +150,8 @@ class _$DeliveryOrderCopyWithImpl<$Res>
       mix: mix == freezed ? _value.mix : mix as String,
       phone: phone == freezed ? _value.phone : phone as String,
       address: address == freezed ? _value.address : address as String,
+      promoCode: promoCode == freezed ? _value.promoCode : promoCode as String,
+      name: name == freezed ? _value.name : name as String,
     ));
   }
 }
@@ -153,25 +161,20 @@ abstract class _$DeliveryOrderCopyWith<$Res>
   factory _$DeliveryOrderCopyWith(
           _DeliveryOrder value, $Res Function(_DeliveryOrder) then) =
       __$DeliveryOrderCopyWithImpl<$Res>;
-
   @override
   $Res call(
       {@JsonKey(name: 'No.', fromJson: fromStringJsonToInt, toJson: toIntToStringJson)
           int no,
       @JsonKey(name: 'Created Date')
           DateTime createDate,
-      @JsonKey(name: 'Delivery Note')
-          String deliveryNote,
-      @JsonKey(name: 'Cafe Đen Đá')
-          String black,
-      @JsonKey(name: 'Cafe Sữa Đá')
-          String milk,
-      @JsonKey(name: 'Bạc Sỉu')
-          String mix,
-      @JsonKey(name: 'Phone')
-          String phone,
-      @JsonKey(name: 'Address')
-          String address});
+      @JsonKey(name: 'Delivery Note') String deliveryNote,
+        @JsonKey(name: 'Cafe Đen Đá') String black,
+        @JsonKey(name: 'Cafe Sữa Đá') String milk,
+        @JsonKey(name: 'Bạc Sỉu') String mix,
+        @JsonKey(name: 'Phone') String phone,
+        @JsonKey(name: 'Address') String address,
+        @JsonKey(name: 'Promo Code') String promoCode,
+        @JsonKey(name: 'Name') String name});
 }
 
 class __$DeliveryOrderCopyWithImpl<$Res>
@@ -194,11 +197,13 @@ class __$DeliveryOrderCopyWithImpl<$Res>
     Object mix = freezed,
     Object phone = freezed,
     Object address = freezed,
+    Object promoCode = freezed,
+    Object name = freezed,
   }) {
     return _then(_DeliveryOrder(
       no: no == freezed ? _value.no : no as int,
       createDate:
-          createDate == freezed ? _value.createDate : createDate as DateTime,
+      createDate == freezed ? _value.createDate : createDate as DateTime,
       deliveryNote: deliveryNote == freezed
           ? _value.deliveryNote
           : deliveryNote as String,
@@ -207,6 +212,8 @@ class __$DeliveryOrderCopyWithImpl<$Res>
       mix: mix == freezed ? _value.mix : mix as String,
       phone: phone == freezed ? _value.phone : phone as String,
       address: address == freezed ? _value.address : address as String,
+      promoCode: promoCode == freezed ? _value.promoCode : promoCode as String,
+      name: name == freezed ? _value.name : name as String,
     ));
   }
 }
@@ -226,18 +233,12 @@ class _$_DeliveryOrder implements _DeliveryOrder {
       @required
       @JsonKey(name: 'Cafe Đen Đá')
           this.black,
-      @required
-      @JsonKey(name: 'Cafe Sữa Đá')
-          this.milk,
-      @required
-      @JsonKey(name: 'Bạc Sỉu')
-          this.mix,
-      @required
-      @JsonKey(name: 'Phone')
-          this.phone,
-      @required
-      @JsonKey(name: 'Address')
-          this.address})
+      @required @JsonKey(name: 'Cafe Sữa Đá') this.milk,
+        @required @JsonKey(name: 'Bạc Sỉu') this.mix,
+        @required @JsonKey(name: 'Phone') this.phone,
+        @required @JsonKey(name: 'Address') this.address,
+        @JsonKey(name: 'Promo Code') this.promoCode,
+        @required @JsonKey(name: 'Name') this.name})
       : assert(no != null),
         assert(createDate != null),
         assert(deliveryNote != null),
@@ -245,7 +246,8 @@ class _$_DeliveryOrder implements _DeliveryOrder {
         assert(milk != null),
         assert(mix != null),
         assert(phone != null),
-        assert(address != null);
+        assert(address != null),
+        assert(name != null);
 
   factory _$_DeliveryOrder.fromJson(Map<String, dynamic> json) =>
       _$_$_DeliveryOrderFromJson(json);
@@ -275,10 +277,16 @@ class _$_DeliveryOrder implements _DeliveryOrder {
   @override
   @JsonKey(name: 'Address')
   final String address;
+  @override
+  @JsonKey(name: 'Promo Code')
+  final String promoCode;
+  @override
+  @JsonKey(name: 'Name')
+  final String name;
 
   @override
   String toString() {
-    return 'DeliveryOrder(no: $no, createDate: $createDate, deliveryNote: $deliveryNote, black: $black, milk: $milk, mix: $mix, phone: $phone, address: $address)';
+    return 'DeliveryOrder(no: $no, createDate: $createDate, deliveryNote: $deliveryNote, black: $black, milk: $milk, mix: $mix, phone: $phone, address: $address, promoCode: $promoCode, name: $name)';
   }
 
   @override
@@ -302,7 +310,13 @@ class _$_DeliveryOrder implements _DeliveryOrder {
             (identical(other.phone, phone) ||
                 const DeepCollectionEquality().equals(other.phone, phone)) &&
             (identical(other.address, address) ||
-                const DeepCollectionEquality().equals(other.address, address)));
+                const DeepCollectionEquality()
+                    .equals(other.address, address)) &&
+            (identical(other.promoCode, promoCode) ||
+                const DeepCollectionEquality()
+                    .equals(other.promoCode, promoCode)) &&
+            (identical(other.name, name) ||
+                const DeepCollectionEquality().equals(other.name, name)));
   }
 
   @override
@@ -315,7 +329,9 @@ class _$_DeliveryOrder implements _DeliveryOrder {
       const DeepCollectionEquality().hash(milk) ^
       const DeepCollectionEquality().hash(mix) ^
       const DeepCollectionEquality().hash(phone) ^
-      const DeepCollectionEquality().hash(address);
+      const DeepCollectionEquality().hash(address) ^
+      const DeepCollectionEquality().hash(promoCode) ^
+      const DeepCollectionEquality().hash(name);
 
   @override
   _$DeliveryOrderCopyWith<_DeliveryOrder> get copyWith =>
@@ -341,18 +357,12 @@ abstract class _DeliveryOrder implements DeliveryOrder {
       @required
       @JsonKey(name: 'Cafe Đen Đá')
           String black,
-      @required
-      @JsonKey(name: 'Cafe Sữa Đá')
-          String milk,
-      @required
-      @JsonKey(name: 'Bạc Sỉu')
-          String mix,
-      @required
-      @JsonKey(name: 'Phone')
-          String phone,
-      @required
-      @JsonKey(name: 'Address')
-          String address}) = _$_DeliveryOrder;
+      @required @JsonKey(name: 'Cafe Sữa Đá') String milk,
+        @required @JsonKey(name: 'Bạc Sỉu') String mix,
+        @required @JsonKey(name: 'Phone') String phone,
+        @required @JsonKey(name: 'Address') String address,
+        @JsonKey(name: 'Promo Code') String promoCode,
+        @required @JsonKey(name: 'Name') String name}) = _$_DeliveryOrder;
 
   factory _DeliveryOrder.fromJson(Map<String, dynamic> json) =
       _$_DeliveryOrder.fromJson;
@@ -361,19 +371,15 @@ abstract class _DeliveryOrder implements DeliveryOrder {
   @JsonKey(
       name: 'No.', fromJson: fromStringJsonToInt, toJson: toIntToStringJson)
   int get no;
-
   @override
   @JsonKey(name: 'Created Date')
   DateTime get createDate;
-
   @override
   @JsonKey(name: 'Delivery Note')
   String get deliveryNote;
-
   @override
   @JsonKey(name: 'Cafe Đen Đá')
   String get black;
-
   @override
   @JsonKey(name: 'Cafe Sữa Đá')
   String get milk;
@@ -389,6 +395,14 @@ abstract class _DeliveryOrder implements DeliveryOrder {
   @override
   @JsonKey(name: 'Address')
   String get address;
+
+  @override
+  @JsonKey(name: 'Promo Code')
+  String get promoCode;
+
+  @override
+  @JsonKey(name: 'Name')
+  String get name;
 
   @override
   _$DeliveryOrderCopyWith<_DeliveryOrder> get copyWith;

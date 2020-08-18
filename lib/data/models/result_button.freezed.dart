@@ -8,7 +8,6 @@ part of 'result_button.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
-
 ResultButton _$ResultButtonFromJson(Map<String, dynamic> json) {
   return _ResultButton.fromJson(json);
 }
@@ -34,15 +33,12 @@ const $ResultButton = _$ResultButtonTearOff();
 mixin _$ResultButton {
   @JsonKey(name: 'Button1')
   String get button1;
-
   @JsonKey(name: 'Button2')
   String get button2;
-
   @JsonKey(name: 'Button3')
   String get button3;
 
   Map<String, dynamic> toJson();
-
   $ResultButtonCopyWith<ResultButton> get copyWith;
 }
 
@@ -50,7 +46,6 @@ abstract class $ResultButtonCopyWith<$Res> {
   factory $ResultButtonCopyWith(
           ResultButton value, $Res Function(ResultButton) then) =
       _$ResultButtonCopyWithImpl<$Res>;
-
   $Res call(
       {@JsonKey(name: 'Button1') String button1,
       @JsonKey(name: 'Button2') String button2,
@@ -61,7 +56,6 @@ class _$ResultButtonCopyWithImpl<$Res> implements $ResultButtonCopyWith<$Res> {
   _$ResultButtonCopyWithImpl(this._value, this._then);
 
   final ResultButton _value;
-
   // ignore: unused_field
   final $Res Function(ResultButton) _then;
 
@@ -84,7 +78,6 @@ abstract class _$ResultButtonCopyWith<$Res>
   factory _$ResultButtonCopyWith(
           _ResultButton value, $Res Function(_ResultButton) then) =
       __$ResultButtonCopyWithImpl<$Res>;
-
   @override
   $Res call(
       {@JsonKey(name: 'Button1') String button1,
@@ -183,15 +176,12 @@ abstract class _ResultButton implements ResultButton {
   @override
   @JsonKey(name: 'Button1')
   String get button1;
-
   @override
   @JsonKey(name: 'Button2')
   String get button2;
-
   @override
   @JsonKey(name: 'Button3')
   String get button3;
-
   @override
   _$ResultButtonCopyWith<_ResultButton> get copyWith;
 }

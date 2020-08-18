@@ -21,6 +21,8 @@ _$_Order _$_$_OrderFromJson(Map<String, dynamic> json) {
     phone: json['Phone'] as String,
     product: json['Product'] as String,
     sweetLevel: json['Sweet Level'] as String,
+    promoCode: json['Promo Code'] as String,
+    name: json['Name'] as String,
   );
 }
 
@@ -36,4 +38,6 @@ Map<String, dynamic> _$_$_OrderToJson(_$_Order instance) => <String, dynamic>{
       'Phone': instance.phone,
       'Product': instance.product,
       'Sweet Level': instance.sweetLevel,
+      'Promo Code': instance.promoCode,
+      'Name': instance.name,
     };

@@ -1,5 +1,6 @@
 import 'package:Cafedy/common/colorz.dart';
 import 'package:Cafedy/common/dimen.dart';
+import 'package:Cafedy/common/input_formatter/uppercase_formatter.dart';
 import 'package:Cafedy/common/widgets/base_screen.dart';
 import 'package:Cafedy/common/widgets/delivery_form.dart';
 import 'package:Cafedy/common/widgets/error_dialog.dart';
@@ -24,6 +25,7 @@ class DeliveryOrderScreen extends HookWidget {
     final phone = useState('');
     final note = useState('');
     final promoCode = useState('');
+    final name = useState('');
 
     final child = BlocBuilder<DeliveryOrderBloc, DeliveryOrderState>(
         cubit: context.bloc<DeliveryOrderBloc>(),
@@ -43,6 +45,7 @@ class DeliveryOrderScreen extends HookWidget {
                   onAddressChange: (value) => address.value = value,
                   onNoteChange: (value) => note.value = value,
                   onPhoneChange: (value) => phone.value = value,
+                  onReceiverNameChange: (value) => name.value = value,
                 ),
                 Padding(
                   padding: const EdgeInsets.fromLTRB(
@@ -58,6 +61,9 @@ class DeliveryOrderScreen extends HookWidget {
                       border: OutlineInputBorder(),
                     ),
                     onChanged: (value) => promoCode.value = value,
+                    inputFormatters: [
+                      UpperCaseFormatter(),
+                    ],
                   ),
                 ),
                 RoundedButton(
@@ -100,16 +106,18 @@ class DeliveryOrderScreen extends HookWidget {
                                 createDate: DateTime.now(),
                                 black: blackKey != null
                                     ? items.value[blackKey].toString()
-                                    : 0,
+                                    : '0',
                                 milk: milkKey != null
                                     ? items.value[milkKey].toString()
-                                    : 0,
+                                    : '0',
                                 mix: mixKey != null
                                     ? items.value[blackKey]?.toString()
-                                    : 0,
+                                    : '0',
                                 address: address.value,
                                 phone: phone.value,
                                 deliveryNote: note.value,
+                                name: name.value,
+                                promoCode: promoCode.value,
                               ),
                             ),
                           );
@@ -121,16 +129,18 @@ class DeliveryOrderScreen extends HookWidget {
                                 createDate: DateTime.now(),
                                 black: blackKey != null
                                     ? items.value[blackKey].toString()
-                                    : 0,
+                                    : '0',
                                 milk: milkKey != null
                                     ? items.value[milkKey].toString()
-                                    : 0,
+                                    : '0',
                                 mix: mixKey != null
                                     ? items.value[blackKey]?.toString()
-                                    : 0,
+                                    : '0',
                                 address: address.value,
                                 phone: phone.value,
                                 deliveryNote: note.value,
+                                name: name.value,
+                                promoCode: promoCode.value,
                               ),
                             ),
                           );

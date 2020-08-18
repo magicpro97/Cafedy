@@ -3,7 +3,6 @@ import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'daily_order.freezed.dart';
-
 part 'daily_order.g.dart';
 
 @freezed
@@ -44,6 +43,11 @@ abstract class DailyOrder with _$DailyOrder {
     @JsonKey(name: 'Sweet Level')
     @required
         String sweetLevel,
+    @JsonKey(name: "Promo Code")
+        String promoCode,
+    @JsonKey(name: 'Name')
+    @required
+        String name,
   }) = _Order;
 
   factory DailyOrder.fromJson(Map<String, dynamic> json) =>
