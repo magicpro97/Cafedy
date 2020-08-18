@@ -71,7 +71,9 @@ class DeliveryOrderScreen extends HookWidget {
                   backgroundColor: Colorz.DARKER,
                   textColor: Colors.white,
                   onPress: () {
-                    if (address.value.isEmpty || phone.value.isEmpty) return;
+                    if (address.value.isEmpty ||
+                        phone.value.isEmpty ||
+                        name.value.isEmpty) return;
 
                     if (items.value.values.every((element) => element == 0)) {
                       showDialog(
