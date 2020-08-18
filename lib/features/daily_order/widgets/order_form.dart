@@ -63,7 +63,7 @@ class OrderForm extends HookWidget {
           ProductSlider(
             products: products,
             onProductChange: (index) {
-              if (products[index].type != selectedProduct.value.type) {
+              if (products[index].type != selectedProduct.value?.type) {
                 package.value = null;
               }
               selectedProduct.value = products[index];
