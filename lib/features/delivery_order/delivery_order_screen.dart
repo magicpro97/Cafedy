@@ -81,6 +81,7 @@ class DeliveryOrderScreen extends HookWidget {
                           content: 'Bạn chưa chọn sản phẩm nào!',
                         ),
                       );
+                      return;
                     }
 
                     final blackKey = items.value.keys.firstWhere(

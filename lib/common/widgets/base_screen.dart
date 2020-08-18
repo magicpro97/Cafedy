@@ -17,12 +17,18 @@ class BaseScreen extends StatelessWidget {
     return Stack(
       children: [
         child,
-        Visibility(
-          visible: isLoading,
-          child: Container(
-            alignment: Alignment.center,
-            color: Colors.black.withOpacity(.3),
-            child: loadingWidget(context),
+        Positioned(
+          top: 0,
+          bottom: 0,
+          left: 0,
+          right: 0,
+          child: Visibility(
+            visible: isLoading,
+            child: Container(
+              alignment: Alignment.center,
+              color: Colors.black.withOpacity(.3),
+              child: loadingWidget(context),
+            ),
           ),
         )
       ],
