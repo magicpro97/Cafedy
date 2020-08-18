@@ -3,6 +3,7 @@ import 'package:Cafedy/common/constants.dart';
 import 'package:Cafedy/common/dimen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class AppTabBar extends PreferredSize {
   final Function onTabChange;
@@ -15,8 +16,8 @@ class AppTabBar extends PreferredSize {
       child: Column(
         children: [
           SizedBox(height: Dimens.NORMAL_SPACE),
-          Image.asset(
-            ImagePaths.IC_CAFEDY,
+          SvgPicture.asset(
+            ImagePaths.IC_LOGO,
             fit: BoxFit.contain,
             height: 24.0,
           ),
@@ -63,6 +64,7 @@ class _TabBar extends HookWidget {
               onTabChange?.call(Tab.EVERYDAY);
             },
             selected: currentTab.value == Tab.EVERYDAY,
+            backgroundColor: Colorz.DARKER,
           ),
           _TabItem(
             imagePath: ImagePaths.IC_DELIVERY_NOW,
@@ -72,6 +74,7 @@ class _TabBar extends HookWidget {
               onTabChange?.call(Tab.DELIVERY);
             },
             selected: currentTab.value == Tab.DELIVERY,
+            backgroundColor: Colorz.TEXT_BLACK,
           ),
           _TabItem(
             imagePath: ImagePaths.IC_MORE,
@@ -81,6 +84,7 @@ class _TabBar extends HookWidget {
               onTabChange?.call(Tab.MORE);
             },
             selected: currentTab.value == Tab.MORE,
+            backgroundColor: Colors.orange,
           ),
         ])
       ],
@@ -93,6 +97,7 @@ class _TabItem extends StatelessWidget {
   final String title;
   final bool selected;
   final Function onPressed;
+  final Color backgroundColor;
 
   const _TabItem({
     Key key,
@@ -100,6 +105,7 @@ class _TabItem extends StatelessWidget {
     @required this.title,
     this.selected = false,
     this.onPressed,
+    this.backgroundColor = Colors.white,
   }) : super(key: key);
 
   @override
@@ -118,7 +124,11 @@ class _TabItem extends StatelessWidget {
         padding: const EdgeInsets.symmetric(vertical: Dimens.NORMAL_SPACE),
         child: Column(
           children: [
-            Image.asset(imagePath),
+            CircleAvatar(
+              radius: 28,
+              child: Image.asset(imagePath),
+              backgroundColor: backgroundColor,
+            ),
             SizedBox(height: Dimens.NORMAL_SPACE),
             Text(
               title,
