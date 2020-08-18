@@ -101,7 +101,6 @@ class OrderForm extends HookWidget {
               Dimens.LARGE_SPACE,
             ),
             child: TextField(
-              keyboardType: TextInputType.phone,
               decoration: InputDecoration(
                 hintText: 'Nhập mã khuyến mãi',
                 border: OutlineInputBorder(),
