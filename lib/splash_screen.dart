@@ -1,8 +1,8 @@
 import 'dart:io';
 
-import 'package:Cafedy/features/app/app_bloc.dart';
 import 'package:Cafedy/common/colorz.dart';
 import 'package:Cafedy/common/dimen.dart';
+import 'package:Cafedy/features/app/app_bloc.dart';
 import 'package:Cafedy/routes.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -24,8 +24,7 @@ class SplashScreen extends StatelessWidget {
       listener: (context, state) {
         state.maybeWhen(
           loaded: () {
-            Navigator.of(context)
-                .pushNamedAndRemoveUntil(Routes.MAIN_SCREEN, (route) => true);
+            Navigator.of(context).pushReplacementNamed(Routes.MAIN_SCREEN);
           },
           orElse: () {},
         );
