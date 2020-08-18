@@ -84,30 +84,22 @@ mixin _$DailyOrder {
   @JsonKey(
       name: 'No.', fromJson: fromStringJsonToInt, toJson: toIntToStringJson)
   int get no;
-
   @JsonKey(name: 'Order Note')
   String get orderNote;
-
   @JsonKey(name: 'Package')
   String get package;
-
   @JsonKey(name: 'Phone')
   String get phone;
-
   @JsonKey(name: 'Product')
   String get product;
-
   @JsonKey(name: 'Sweet Level')
   String get sweetLevel;
-
   @JsonKey(name: 'Promo Code')
   String get promoCode;
-
   @JsonKey(name: 'Name')
   String get name;
 
   Map<String, dynamic> toJson();
-
   $DailyOrderCopyWith<DailyOrder> get copyWith;
 }
 
@@ -115,25 +107,23 @@ abstract class $DailyOrderCopyWith<$Res> {
   factory $DailyOrderCopyWith(
           DailyOrder value, $Res Function(DailyOrder) then) =
       _$DailyOrderCopyWithImpl<$Res>;
-  $Res call(
-      {@JsonKey(name: 'Address')
-          String address,
-      @JsonKey(name: 'Amount', fromJson: fromStringJsonToInt, toJson: toIntToStringJson)
-          int amount,
-      @JsonKey(name: 'Caffeine Level')
-          String caffeineLevel,
-      @JsonKey(name: 'Created Date')
-          DateTime createDate,
-      @JsonKey(name: 'Delivery Note')
-          String deliveryNote,
-      @JsonKey(name: 'No.', fromJson: fromStringJsonToInt, toJson: toIntToStringJson) int no,
-        @JsonKey(name: 'Order Note') String orderNote,
-        @JsonKey(name: 'Package') String package,
-        @JsonKey(name: 'Phone') String phone,
-        @JsonKey(name: 'Product') String product,
-        @JsonKey(name: 'Sweet Level') String sweetLevel,
-        @JsonKey(name: 'Promo Code') String promoCode,
-        @JsonKey(name: 'Name') String name});
+  $Res call({@JsonKey(name: 'Address') String address,
+    @JsonKey(name: 'Amount',
+        fromJson: fromStringJsonToInt,
+        toJson: toIntToStringJson) int amount,
+    @JsonKey(name: 'Caffeine Level') String caffeineLevel,
+    @JsonKey(name: 'Created Date') DateTime createDate,
+    @JsonKey(name: 'Delivery Note') String deliveryNote,
+    @JsonKey(name: 'No.',
+        fromJson: fromStringJsonToInt,
+        toJson: toIntToStringJson) int no,
+    @JsonKey(name: 'Order Note') String orderNote,
+    @JsonKey(name: 'Package') String package,
+    @JsonKey(name: 'Phone') String phone,
+    @JsonKey(name: 'Product') String product,
+    @JsonKey(name: 'Sweet Level') String sweetLevel,
+    @JsonKey(name: 'Promo Code') String promoCode,
+    @JsonKey(name: 'Name') String name});
 }
 
 class _$DailyOrderCopyWithImpl<$Res> implements $DailyOrderCopyWith<$Res> {
@@ -176,7 +166,7 @@ class _$DailyOrderCopyWithImpl<$Res> implements $DailyOrderCopyWith<$Res> {
       phone: phone == freezed ? _value.phone : phone as String,
       product: product == freezed ? _value.product : product as String,
       sweetLevel:
-      sweetLevel == freezed ? _value.sweetLevel : sweetLevel as String,
+          sweetLevel == freezed ? _value.sweetLevel : sweetLevel as String,
       promoCode: promoCode == freezed ? _value.promoCode : promoCode as String,
       name: name == freezed ? _value.name : name as String,
     ));
@@ -238,7 +228,7 @@ class __$OrderCopyWithImpl<$Res> extends _$DailyOrderCopyWithImpl<$Res>
           ? _value.caffeineLevel
           : caffeineLevel as String,
       createDate:
-          createDate == freezed ? _value.createDate : createDate as DateTime,
+      createDate == freezed ? _value.createDate : createDate as DateTime,
       deliveryNote: deliveryNote == freezed
           ? _value.deliveryNote
           : deliveryNote as String,
@@ -262,18 +252,13 @@ class _$_Order with DiagnosticableTreeMixin implements _Order {
           this.address,
       @JsonKey(name: 'Amount', fromJson: fromStringJsonToInt, toJson: toIntToStringJson)
           this.amount,
-      @required
-      @JsonKey(name: 'Caffeine Level')
-          this.caffeineLevel,
-      @required
-      @JsonKey(name: 'Created Date')
-          this.createDate,
-      @JsonKey(name: 'Delivery Note')
-          this.deliveryNote,
-      @required
-      @JsonKey(name: 'No.', fromJson: fromStringJsonToInt, toJson: toIntToStringJson)
-          this.no,
-      @JsonKey(name: 'Order Note') this.orderNote,
+      @required @JsonKey(name: 'Caffeine Level') this.caffeineLevel,
+        @required @JsonKey(name: 'Created Date') this.createDate,
+        @JsonKey(name: 'Delivery Note') this.deliveryNote,
+        @required @JsonKey(name: 'No.',
+            fromJson: fromStringJsonToInt,
+            toJson: toIntToStringJson) this.no,
+        @JsonKey(name: 'Order Note') this.orderNote,
         @JsonKey(name: 'Package') this.package,
         @JsonKey(name: 'Phone') this.phone,
         @required @JsonKey(name: 'Product') this.product,
@@ -448,6 +433,7 @@ abstract class _Order implements DailyOrder {
   @override
   @JsonKey(name: 'Address')
   String get address;
+
   @override
   @JsonKey(
       name: 'Amount', fromJson: fromStringJsonToInt, toJson: toIntToStringJson)
@@ -471,27 +457,21 @@ abstract class _Order implements DailyOrder {
   @override
   @JsonKey(name: 'Package')
   String get package;
-
   @override
   @JsonKey(name: 'Phone')
   String get phone;
-
   @override
   @JsonKey(name: 'Product')
   String get product;
-
   @override
   @JsonKey(name: 'Sweet Level')
   String get sweetLevel;
-
   @override
   @JsonKey(name: 'Promo Code')
   String get promoCode;
-
   @override
   @JsonKey(name: 'Name')
   String get name;
-
   @override
   _$OrderCopyWith<_Order> get copyWith;
 }

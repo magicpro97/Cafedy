@@ -696,7 +696,6 @@ mixin _$AppStore {
 abstract class $AppStoreCopyWith<$Res> {
   factory $AppStoreCopyWith(AppStore value, $Res Function(AppStore) then) =
       _$AppStoreCopyWithImpl<$Res>;
-
   $Res call(
       {int updateVersion,
       List<Product> products,
@@ -731,9 +730,9 @@ class _$AppStoreCopyWithImpl<$Res> implements $AppStoreCopyWith<$Res> {
           ? _value.updateVersion
           : updateVersion as int,
       products:
-      products == freezed ? _value.products : products as List<Product>,
+          products == freezed ? _value.products : products as List<Product>,
       packages:
-      packages == freezed ? _value.packages : packages as List<Package>,
+          packages == freezed ? _value.packages : packages as List<Package>,
       caffeineLevels: caffeineLevels == freezed
           ? _value.caffeineLevels
           : caffeineLevels as List<CaffeineLevel>,

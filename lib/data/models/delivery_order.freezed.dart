@@ -71,30 +71,22 @@ mixin _$DeliveryOrder {
   DateTime get createDate;
   @JsonKey(name: 'Delivery Note')
   String get deliveryNote;
-
   @JsonKey(name: 'Cafe Đen Đá')
   String get black;
-
   @JsonKey(name: 'Cafe Sữa Đá')
   String get milk;
-
   @JsonKey(name: 'Bạc Sỉu')
   String get mix;
-
   @JsonKey(name: 'Phone')
   String get phone;
-
   @JsonKey(name: 'Address')
   String get address;
-
   @JsonKey(name: 'Promo Code')
   String get promoCode;
-
   @JsonKey(name: 'Name')
   String get name;
 
   Map<String, dynamic> toJson();
-
   $DeliveryOrderCopyWith<DeliveryOrder> get copyWith;
 }
 
@@ -107,14 +99,22 @@ abstract class $DeliveryOrderCopyWith<$Res> {
           int no,
       @JsonKey(name: 'Created Date')
           DateTime createDate,
-      @JsonKey(name: 'Delivery Note') String deliveryNote,
-        @JsonKey(name: 'Cafe Đen Đá') String black,
-        @JsonKey(name: 'Cafe Sữa Đá') String milk,
-        @JsonKey(name: 'Bạc Sỉu') String mix,
-        @JsonKey(name: 'Phone') String phone,
-        @JsonKey(name: 'Address') String address,
-        @JsonKey(name: 'Promo Code') String promoCode,
-        @JsonKey(name: 'Name') String name});
+      @JsonKey(name: 'Delivery Note')
+          String deliveryNote,
+      @JsonKey(name: 'Cafe Đen Đá')
+          String black,
+      @JsonKey(name: 'Cafe Sữa Đá')
+          String milk,
+      @JsonKey(name: 'Bạc Sỉu')
+          String mix,
+      @JsonKey(name: 'Phone')
+          String phone,
+      @JsonKey(name: 'Address')
+          String address,
+      @JsonKey(name: 'Promo Code')
+          String promoCode,
+      @JsonKey(name: 'Name')
+          String name});
 }
 
 class _$DeliveryOrderCopyWithImpl<$Res>
@@ -161,20 +161,20 @@ abstract class _$DeliveryOrderCopyWith<$Res>
   factory _$DeliveryOrderCopyWith(
           _DeliveryOrder value, $Res Function(_DeliveryOrder) then) =
       __$DeliveryOrderCopyWithImpl<$Res>;
+
   @override
-  $Res call(
-      {@JsonKey(name: 'No.', fromJson: fromStringJsonToInt, toJson: toIntToStringJson)
-          int no,
-      @JsonKey(name: 'Created Date')
-          DateTime createDate,
-      @JsonKey(name: 'Delivery Note') String deliveryNote,
-        @JsonKey(name: 'Cafe Đen Đá') String black,
-        @JsonKey(name: 'Cafe Sữa Đá') String milk,
-        @JsonKey(name: 'Bạc Sỉu') String mix,
-        @JsonKey(name: 'Phone') String phone,
-        @JsonKey(name: 'Address') String address,
-        @JsonKey(name: 'Promo Code') String promoCode,
-        @JsonKey(name: 'Name') String name});
+  $Res call({@JsonKey(name: 'No.',
+      fromJson: fromStringJsonToInt,
+      toJson: toIntToStringJson) int no,
+    @JsonKey(name: 'Created Date') DateTime createDate,
+    @JsonKey(name: 'Delivery Note') String deliveryNote,
+    @JsonKey(name: 'Cafe Đen Đá') String black,
+    @JsonKey(name: 'Cafe Sữa Đá') String milk,
+    @JsonKey(name: 'Bạc Sỉu') String mix,
+    @JsonKey(name: 'Phone') String phone,
+    @JsonKey(name: 'Address') String address,
+    @JsonKey(name: 'Promo Code') String promoCode,
+    @JsonKey(name: 'Name') String name});
 }
 
 class __$DeliveryOrderCopyWithImpl<$Res>
@@ -222,18 +222,11 @@ class __$DeliveryOrderCopyWithImpl<$Res>
 class _$_DeliveryOrder implements _DeliveryOrder {
   _$_DeliveryOrder(
       {@required
-      @JsonKey(name: 'No.', fromJson: fromStringJsonToInt, toJson: toIntToStringJson)
-          this.no,
-      @required
-      @JsonKey(name: 'Created Date')
-          this.createDate,
-      @required
-      @JsonKey(name: 'Delivery Note')
-          this.deliveryNote,
-      @required
-      @JsonKey(name: 'Cafe Đen Đá')
-          this.black,
-      @required @JsonKey(name: 'Cafe Sữa Đá') this.milk,
+      @JsonKey(name: 'No.', fromJson: fromStringJsonToInt, toJson: toIntToStringJson) this.no,
+        @required @JsonKey(name: 'Created Date') this.createDate,
+        @required @JsonKey(name: 'Delivery Note') this.deliveryNote,
+        @required @JsonKey(name: 'Cafe Đen Đá') this.black,
+        @required @JsonKey(name: 'Cafe Sữa Đá') this.milk,
         @required @JsonKey(name: 'Bạc Sỉu') this.mix,
         @required @JsonKey(name: 'Phone') this.phone,
         @required @JsonKey(name: 'Address') this.address,
@@ -346,18 +339,11 @@ class _$_DeliveryOrder implements _DeliveryOrder {
 abstract class _DeliveryOrder implements DeliveryOrder {
   factory _DeliveryOrder(
       {@required
-      @JsonKey(name: 'No.', fromJson: fromStringJsonToInt, toJson: toIntToStringJson)
-          int no,
-      @required
-      @JsonKey(name: 'Created Date')
-          DateTime createDate,
-      @required
-      @JsonKey(name: 'Delivery Note')
-          String deliveryNote,
-      @required
-      @JsonKey(name: 'Cafe Đen Đá')
-          String black,
-      @required @JsonKey(name: 'Cafe Sữa Đá') String milk,
+      @JsonKey(name: 'No.', fromJson: fromStringJsonToInt, toJson: toIntToStringJson) int no,
+        @required @JsonKey(name: 'Created Date') DateTime createDate,
+        @required @JsonKey(name: 'Delivery Note') String deliveryNote,
+        @required @JsonKey(name: 'Cafe Đen Đá') String black,
+        @required @JsonKey(name: 'Cafe Sữa Đá') String milk,
         @required @JsonKey(name: 'Bạc Sỉu') String mix,
         @required @JsonKey(name: 'Phone') String phone,
         @required @JsonKey(name: 'Address') String address,
@@ -383,27 +369,21 @@ abstract class _DeliveryOrder implements DeliveryOrder {
   @override
   @JsonKey(name: 'Cafe Sữa Đá')
   String get milk;
-
   @override
   @JsonKey(name: 'Bạc Sỉu')
   String get mix;
-
   @override
   @JsonKey(name: 'Phone')
   String get phone;
-
   @override
   @JsonKey(name: 'Address')
   String get address;
-
   @override
   @JsonKey(name: 'Promo Code')
   String get promoCode;
-
   @override
   @JsonKey(name: 'Name')
   String get name;
-
   @override
   _$DeliveryOrderCopyWith<_DeliveryOrder> get copyWith;
 }

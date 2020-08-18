@@ -312,8 +312,8 @@ abstract class _$UpdateOrderCopyWith<$Res> {
 class __$UpdateOrderCopyWithImpl<$Res>
     extends _$DailyOrderActionCopyWithImpl<$Res>
     implements _$UpdateOrderCopyWith<$Res> {
-  __$UpdateOrderCopyWithImpl(_UpdateOrder _value,
-      $Res Function(_UpdateOrder) _then)
+  __$UpdateOrderCopyWithImpl(
+      _UpdateOrder _value, $Res Function(_UpdateOrder) _then)
       : super(_value, (v) => _then(v as _UpdateOrder));
 
   @override

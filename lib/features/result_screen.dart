@@ -46,8 +46,8 @@ class ResultScreen extends StatelessWidget {
                 textColor: Colors.black,
                 borderColor: Colors.black,
                 onPress: () async {
-                  if (await canLaunch('https://m.me/CafedyVN')) {
-                    launch('https://m.me/CafedyVN');
+                  if (await canLaunch(resultButtons.button1Link)) {
+                    launch(resultButtons.button1Link);
                   }
                 },
               ),
@@ -56,9 +56,8 @@ class ResultScreen extends StatelessWidget {
                 backgroundColor: Colorz.DARKER,
                 textColor: Colors.white,
                 onPress: () async {
-                  if (await canLaunch(
-                      'https://m.me/CafedyVN?ref=invitefriends')) {
-                    launch('https://m.me/CafedyVN?ref=invitefriends');
+                  if (await canLaunch(resultButtons.button2Link)) {
+                    launch(resultButtons.button2Link);
                   }
                 },
               ),
