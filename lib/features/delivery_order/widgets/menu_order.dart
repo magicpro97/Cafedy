@@ -1,5 +1,6 @@
 import 'package:Cafedy/common/constants.dart';
 import 'package:Cafedy/common/dimen.dart';
+import 'package:Cafedy/common/extension.dart';
 import 'package:Cafedy/data/models/product.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
@@ -65,7 +66,10 @@ class _MenuItem extends HookWidget {
               children: [
                 Text(product.name, style: textTheme.headline6),
                 SizedBox(width: Dimens.NORMAL_SPACE),
-                Text(product.price.toString()),
+                Text(
+                  product.price.short(),
+                  style: textTheme.subtitle1,
+                ),
               ],
             ),
             SizedBox(height: Dimens.NORMAL_SPACE),
